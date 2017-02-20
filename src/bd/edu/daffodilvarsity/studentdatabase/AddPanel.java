@@ -31,18 +31,19 @@ public class AddPanel extends javax.swing.JPanel {
 
         welcomePanel = new javax.swing.JPanel();
         welcomeText = new javax.swing.JLabel();
-        addButtonPanel3 = new javax.swing.JPanel();
+        findButton = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         viewResultButton = new javax.swing.JPanel();
         jLabel40 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         admitStudentButton = new javax.swing.JPanel();
-        jLabel37 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
-        dropStudentButton = new javax.swing.JPanel();
         jLabel41 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
+        dropStudentButton = new javax.swing.JPanel();
+        jLabel43 = new javax.swing.JLabel();
+        jSeparator9 = new javax.swing.JSeparator();
+        findStudentField = new javax.swing.JTextField();
         addStudentPanel = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jSeparator21 = new javax.swing.JSeparator();
@@ -78,69 +79,37 @@ public class AddPanel extends javax.swing.JPanel {
         addButtonPanel5 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
         dropStudentPanel = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jSeparator36 = new javax.swing.JSeparator();
-        jLabel17 = new javax.swing.JLabel();
-        nameLabel7 = new javax.swing.JLabel();
-        nameField7 = new javax.swing.JTextField();
-        jSeparator37 = new javax.swing.JSeparator();
-        idLabel7 = new javax.swing.JLabel();
-        idField7 = new javax.swing.JTextField();
-        jSeparator38 = new javax.swing.JSeparator();
-        fathersNameField7 = new javax.swing.JTextField();
-        jLabel42 = new javax.swing.JLabel();
-        jSeparator39 = new javax.swing.JSeparator();
-        genderLabel7 = new javax.swing.JLabel();
-        jSeparator40 = new javax.swing.JSeparator();
-        jScrollPane16 = new javax.swing.JScrollPane();
-        jList16 = new javax.swing.JList<>();
-        jScrollPane17 = new javax.swing.JScrollPane();
-        jList17 = new javax.swing.JList<>();
-        motherLabel7 = new javax.swing.JLabel();
-        femaleCheck7 = new javax.swing.JRadioButton();
-        maleCheck7 = new javax.swing.JRadioButton();
-        removeButtonPanel7 = new javax.swing.JPanel();
-        createProfileButtonPanel12 = new javax.swing.JPanel();
-        jLabel44 = new javax.swing.JLabel();
-        addButtonPanel7 = new javax.swing.JPanel();
-        showSelectedCourses7 = new javax.swing.JLabel();
-        mothersNameField7 = new javax.swing.JTextField();
-        fatherLabel7 = new javax.swing.JLabel();
-        mainFromDrop = new javax.swing.JPanel();
+        dropSearchStudentPanel = new javax.swing.JPanel();
+        jSeparator12 = new javax.swing.JSeparator();
+        findStudentDropField = new javax.swing.JTextField();
+        mainFromDrop1 = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
-        jSeparator7 = new javax.swing.JSeparator();
-        viewResultPanel = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jSeparator31 = new javax.swing.JSeparator();
+        jSeparator13 = new javax.swing.JSeparator();
+        dropStudentSearchButton1 = new javax.swing.JPanel();
+        dropStudentSearchButtonLabel1 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        dropFoundStudentPanel = new javax.swing.JPanel();
+        mainFromDrop2 = new javax.swing.JPanel();
+        jLabel47 = new javax.swing.JLabel();
+        jSeparator15 = new javax.swing.JSeparator();
+        dropStudentSearchButton2 = new javax.swing.JPanel();
+        dropStudentSearchButtonLabel2 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        resultPanel = new javax.swing.JPanel();
+        resultSearchPanel = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        nameLabel6 = new javax.swing.JLabel();
-        nameField6 = new javax.swing.JTextField();
-        jSeparator32 = new javax.swing.JSeparator();
-        idLabel6 = new javax.swing.JLabel();
-        idField6 = new javax.swing.JTextField();
-        jSeparator33 = new javax.swing.JSeparator();
-        fathersNameField6 = new javax.swing.JTextField();
-        jLabel33 = new javax.swing.JLabel();
-        jSeparator34 = new javax.swing.JSeparator();
-        genderLabel6 = new javax.swing.JLabel();
-        jSeparator35 = new javax.swing.JSeparator();
-        jScrollPane14 = new javax.swing.JScrollPane();
-        jList14 = new javax.swing.JList<>();
-        jScrollPane15 = new javax.swing.JScrollPane();
-        jList15 = new javax.swing.JList<>();
-        motherLabel6 = new javax.swing.JLabel();
-        femaleCheck6 = new javax.swing.JRadioButton();
-        maleCheck6 = new javax.swing.JRadioButton();
-        removeButtonPanel6 = new javax.swing.JPanel();
-        createProfileButtonPanel6 = new javax.swing.JPanel();
-        jLabel35 = new javax.swing.JLabel();
-        addButtonPanel6 = new javax.swing.JPanel();
-        showSelectedCourses6 = new javax.swing.JLabel();
-        mothersNameField6 = new javax.swing.JTextField();
-        fatherLabel6 = new javax.swing.JLabel();
-        mainFromResult = new javax.swing.JPanel();
-        jLabel39 = new javax.swing.JLabel();
-        jSeparator6 = new javax.swing.JSeparator();
+        resultSearchButton1 = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
+        mainFromResult1 = new javax.swing.JPanel();
+        jLabel42 = new javax.swing.JLabel();
+        jSeparator7 = new javax.swing.JSeparator();
+        resultSearchField1 = new javax.swing.JTextField();
+        jSeparator10 = new javax.swing.JSeparator();
+        resultViewPanel = new javax.swing.JPanel();
+        mainFromResult4 = new javax.swing.JPanel();
+        jLabel49 = new javax.swing.JLabel();
+        jSeparator8 = new javax.swing.JSeparator();
+        jLabel18 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(36, 47, 65));
         setForeground(new java.awt.Color(204, 204, 204));
@@ -155,19 +124,19 @@ public class AddPanel extends javax.swing.JPanel {
         welcomeText.setText("Welcome to Student Database");
         welcomePanel.add(welcomeText, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 360, 50));
 
-        addButtonPanel3.setBackground(new java.awt.Color(50, 132, 255));
-        addButtonPanel3.setForeground(new java.awt.Color(255, 255, 255));
-        addButtonPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        findButton.setBackground(new java.awt.Color(50, 132, 255));
+        findButton.setForeground(new java.awt.Color(255, 255, 255));
+        findButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel23.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("FIND");
-        addButtonPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 40, 40));
+        findButton.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 40, 40));
 
-        welcomePanel.add(addButtonPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, 100, 40));
+        welcomePanel.add(findButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, 100, 40));
         welcomePanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 330, 30));
 
-        viewResultButton.setBackground(new java.awt.Color(36, 47, 65));
+        viewResultButton.setBackground(new java.awt.Color(50, 132, 255));
         viewResultButton.setForeground(new java.awt.Color(255, 255, 255));
         viewResultButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -179,12 +148,12 @@ public class AddPanel extends javax.swing.JPanel {
         jLabel40.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(255, 255, 255));
         jLabel40.setText("VIEW RESULT");
-        viewResultButton.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 150, 50));
+        viewResultButton.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 120, 50));
         viewResultButton.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 130, 20));
 
         welcomePanel.add(viewResultButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 450, 180, 50));
 
-        admitStudentButton.setBackground(new java.awt.Color(36, 47, 65));
+        admitStudentButton.setBackground(new java.awt.Color(50, 132, 255));
         admitStudentButton.setForeground(new java.awt.Color(255, 255, 255));
         admitStudentButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -193,15 +162,15 @@ public class AddPanel extends javax.swing.JPanel {
         });
         admitStudentButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel37.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel37.setText("ADMIT STUDENT");
-        admitStudentButton.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 50));
-        admitStudentButton.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 160, 20));
+        jLabel41.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel41.setText("ADMIT STUDENT");
+        admitStudentButton.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 50));
+        admitStudentButton.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 160, 20));
 
-        welcomePanel.add(admitStudentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 170, 50));
+        welcomePanel.add(admitStudentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 180, 50));
 
-        dropStudentButton.setBackground(new java.awt.Color(36, 47, 65));
+        dropStudentButton.setBackground(new java.awt.Color(50, 132, 255));
         dropStudentButton.setForeground(new java.awt.Color(255, 255, 255));
         dropStudentButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -210,13 +179,30 @@ public class AddPanel extends javax.swing.JPanel {
         });
         dropStudentButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel41.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jLabel41.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel41.setText("DROP STUDENT");
-        dropStudentButton.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 50));
-        dropStudentButton.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 150, 20));
+        jLabel43.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel43.setText("DROP STUDENT");
+        dropStudentButton.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 140, 50));
+        dropStudentButton.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 150, 20));
 
         welcomePanel.add(dropStudentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, 180, 50));
+
+        findStudentField.setBackground(new java.awt.Color(36, 47, 65));
+        findStudentField.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        findStudentField.setForeground(new java.awt.Color(204, 204, 204));
+        findStudentField.setText("Enter ID to find");
+        findStudentField.setBorder(null);
+        findStudentField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                findStudentFieldMouseClicked(evt);
+            }
+        });
+        findStudentField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                findStudentFieldActionPerformed(evt);
+            }
+        });
+        welcomePanel.add(findStudentField, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 330, 40));
 
         add(welcomePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -440,405 +426,194 @@ public class AddPanel extends javax.swing.JPanel {
         dropStudentPanel.setForeground(new java.awt.Color(204, 204, 204));
         dropStudentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel16.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("STUDENT DETAILS");
-        dropStudentPanel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+        dropSearchStudentPanel.setBackground(new java.awt.Color(36, 47, 65));
+        dropSearchStudentPanel.setForeground(new java.awt.Color(204, 204, 204));
+        dropSearchStudentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        dropSearchStudentPanel.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 330, 30));
 
-        jSeparator36.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        dropStudentPanel.add(jSeparator36, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 20, 390));
-
-        jLabel17.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setText("SELECT COURSES");
-        dropStudentPanel.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, -1, -1));
-
-        nameLabel7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        nameLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        nameLabel7.setText("FULL NAME");
-        dropStudentPanel.add(nameLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
-
-        nameField7.setBackground(new java.awt.Color(36, 47, 65));
-        nameField7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        nameField7.setForeground(new java.awt.Color(204, 204, 204));
-        nameField7.setText("Enter name");
-        nameField7.setBorder(null);
-        nameField7.addMouseListener(new java.awt.event.MouseAdapter() {
+        findStudentDropField.setBackground(new java.awt.Color(36, 47, 65));
+        findStudentDropField.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        findStudentDropField.setForeground(new java.awt.Color(204, 204, 204));
+        findStudentDropField.setText("Enter Student ID");
+        findStudentDropField.setBorder(null);
+        findStudentDropField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                nameField7MouseClicked(evt);
+                findStudentDropFieldMouseClicked(evt);
             }
         });
-        nameField7.addActionListener(new java.awt.event.ActionListener() {
+        findStudentDropField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameField7ActionPerformed(evt);
+                findStudentDropFieldActionPerformed(evt);
             }
         });
-        dropStudentPanel.add(nameField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 200, 40));
-        dropStudentPanel.add(jSeparator37, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 200, -1));
+        dropSearchStudentPanel.add(findStudentDropField, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 330, 40));
 
-        idLabel7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        idLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        idLabel7.setText("ID");
-        dropStudentPanel.add(idLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
-
-        idField7.setBackground(new java.awt.Color(36, 47, 65));
-        idField7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        idField7.setForeground(new java.awt.Color(204, 204, 204));
-        idField7.setText("Enter student ID");
-        idField7.setBorder(null);
-        idField7.addMouseListener(new java.awt.event.MouseAdapter() {
+        mainFromDrop1.setBackground(new java.awt.Color(36, 47, 65));
+        mainFromDrop1.setForeground(new java.awt.Color(255, 255, 255));
+        mainFromDrop1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                idField7MouseClicked(evt);
+                mainFromDrop1MouseClicked(evt);
             }
         });
-        idField7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idField7ActionPerformed(evt);
-            }
-        });
-        dropStudentPanel.add(idField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 200, 40));
-        dropStudentPanel.add(jSeparator38, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 200, -1));
+        mainFromDrop1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        fathersNameField7.setBackground(new java.awt.Color(36, 47, 65));
-        fathersNameField7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        fathersNameField7.setForeground(new java.awt.Color(204, 204, 204));
-        fathersNameField7.setText("Enter name");
-        fathersNameField7.setBorder(null);
-        fathersNameField7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fathersNameField7MouseClicked(evt);
-            }
-        });
-        fathersNameField7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fathersNameField7ActionPerformed(evt);
-            }
-        });
-        dropStudentPanel.add(fathersNameField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 200, 40));
-
-        jLabel42.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel42.setText("SELECTED COURSES:");
-        dropStudentPanel.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, -1, -1));
-        dropStudentPanel.add(jSeparator39, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 200, -1));
-
-        genderLabel7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        genderLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        genderLabel7.setText("GENDER");
-        dropStudentPanel.add(genderLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
-        dropStudentPanel.add(jSeparator40, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 200, -1));
-
-        jList16.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "CSE121", "CSE 122", "CSE 123", "CSE 221", "CSE 222", "CSE 223" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane16.setViewportView(jList16);
-
-        dropStudentPanel.add(jScrollPane16, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 90, 110, 230));
-
-        jList17.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "CSE121", "CSE 122", "CSE 123", "CSE 221", "CSE 222", "CSE 223" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane17.setViewportView(jList17);
-
-        dropStudentPanel.add(jScrollPane17, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 120, 230));
-
-        motherLabel7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        motherLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        motherLabel7.setText("MOTHER'S NAME");
-        dropStudentPanel.add(motherLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
-
-        femaleCheck7.setBackground(new java.awt.Color(36, 47, 65));
-        femaleCheck7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        femaleCheck7.setForeground(new java.awt.Color(255, 255, 255));
-        femaleCheck7.setText("FEMALE");
-        femaleCheck7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                femaleCheck7ActionPerformed(evt);
-            }
-        });
-        dropStudentPanel.add(femaleCheck7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, -1, -1));
-
-        maleCheck7.setBackground(new java.awt.Color(36, 47, 65));
-        maleCheck7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        maleCheck7.setForeground(new java.awt.Color(255, 255, 255));
-        maleCheck7.setText("MALE");
-        maleCheck7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                maleCheck7ActionPerformed(evt);
-            }
-        });
-        dropStudentPanel.add(maleCheck7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, -1, -1));
-
-        removeButtonPanel7.setBackground(new java.awt.Color(50, 132, 255));
-        removeButtonPanel7.setForeground(new java.awt.Color(255, 255, 255));
-        dropStudentPanel.add(removeButtonPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 200, 90, 40));
-
-        createProfileButtonPanel12.setBackground(new java.awt.Color(50, 132, 255));
-        createProfileButtonPanel12.setForeground(new java.awt.Color(255, 255, 255));
-        createProfileButtonPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel44.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel44.setText("CREATE PROFILE");
-        createProfileButtonPanel12.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 140, 30));
-
-        dropStudentPanel.add(createProfileButtonPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, 180, 50));
-
-        addButtonPanel7.setBackground(new java.awt.Color(50, 132, 255));
-        addButtonPanel7.setForeground(new java.awt.Color(255, 255, 255));
-        dropStudentPanel.add(addButtonPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 140, 90, 40));
-
-        showSelectedCourses7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        showSelectedCourses7.setForeground(new java.awt.Color(255, 0, 102));
-        showSelectedCourses7.setText("0");
-        dropStudentPanel.add(showSelectedCourses7, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 360, 70, 20));
-
-        mothersNameField7.setBackground(new java.awt.Color(36, 47, 65));
-        mothersNameField7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        mothersNameField7.setForeground(new java.awt.Color(204, 204, 204));
-        mothersNameField7.setText("Enter name");
-        mothersNameField7.setBorder(null);
-        mothersNameField7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                mothersNameField7MouseClicked(evt);
-            }
-        });
-        mothersNameField7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mothersNameField7ActionPerformed(evt);
-            }
-        });
-        dropStudentPanel.add(mothersNameField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 200, 40));
-
-        fatherLabel7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        fatherLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        fatherLabel7.setText("FATHER'S NAME");
-        dropStudentPanel.add(fatherLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
-
-        mainFromDrop.setBackground(new java.awt.Color(36, 47, 65));
-        mainFromDrop.setForeground(new java.awt.Color(255, 255, 255));
-        mainFromDrop.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                mainFromDropMouseClicked(evt);
-            }
-        });
-        mainFromDrop.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel46.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jLabel46.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel46.setForeground(new java.awt.Color(255, 255, 255));
         jLabel46.setText("BACK TO MAIN MENU");
-        mainFromDrop.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 50));
-        mainFromDrop.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 160, 20));
+        mainFromDrop1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 50));
+        mainFromDrop1.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 150, 20));
 
-        dropStudentPanel.add(mainFromDrop, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 170, 50));
+        dropSearchStudentPanel.add(mainFromDrop1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 170, 50));
+
+        dropStudentSearchButton1.setBackground(new java.awt.Color(50, 132, 255));
+        dropStudentSearchButton1.setForeground(new java.awt.Color(255, 255, 255));
+        dropStudentSearchButton1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        dropStudentSearchButtonLabel1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        dropStudentSearchButtonLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        dropStudentSearchButtonLabel1.setText("DROP");
+        dropStudentSearchButton1.add(dropStudentSearchButtonLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 70, 40));
+
+        dropSearchStudentPanel.add(dropStudentSearchButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, 100, 40));
+
+        jLabel16.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Drop Student");
+        dropSearchStudentPanel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 190, 40));
+
+        dropStudentPanel.add(dropSearchStudentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        dropFoundStudentPanel.setBackground(new java.awt.Color(36, 47, 65));
+        dropFoundStudentPanel.setForeground(new java.awt.Color(204, 204, 204));
+        dropFoundStudentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        mainFromDrop2.setBackground(new java.awt.Color(36, 47, 65));
+        mainFromDrop2.setForeground(new java.awt.Color(255, 255, 255));
+        mainFromDrop2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mainFromDrop2MouseClicked(evt);
+            }
+        });
+        mainFromDrop2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel47.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel47.setText("BACK TO MAIN MENU");
+        mainFromDrop2.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 50));
+        mainFromDrop2.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 150, 20));
+
+        dropFoundStudentPanel.add(mainFromDrop2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 170, 50));
+
+        dropStudentSearchButton2.setBackground(new java.awt.Color(50, 132, 255));
+        dropStudentSearchButton2.setForeground(new java.awt.Color(255, 255, 255));
+        dropStudentSearchButton2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        dropStudentSearchButtonLabel2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        dropStudentSearchButtonLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        dropStudentSearchButtonLabel2.setText("PROCEED");
+        dropStudentSearchButton2.add(dropStudentSearchButtonLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 80, 40));
+
+        dropFoundStudentPanel.add(dropStudentSearchButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 120, 40));
+
+        jLabel17.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("DROP STUDENT");
+        dropFoundStudentPanel.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 190, 40));
+
+        dropStudentPanel.add(dropFoundStudentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         add(dropStudentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        viewResultPanel.setBackground(new java.awt.Color(36, 47, 65));
-        viewResultPanel.setForeground(new java.awt.Color(204, 204, 204));
-        viewResultPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        resultPanel.setBackground(new java.awt.Color(36, 47, 65));
+        resultPanel.setForeground(new java.awt.Color(204, 204, 204));
+        resultPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel14.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("STUDENT DETAILS");
-        viewResultPanel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+        resultSearchPanel.setBackground(new java.awt.Color(36, 47, 65));
+        resultSearchPanel.setForeground(new java.awt.Color(204, 204, 204));
+        resultSearchPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jSeparator31.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        viewResultPanel.add(jSeparator31, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 20, 390));
-
-        jLabel15.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("SELECT COURSES");
-        viewResultPanel.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, -1, -1));
+        jLabel15.setText("Result");
+        resultSearchPanel.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 190, 40));
 
-        nameLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        nameLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        nameLabel6.setText("FULL NAME");
-        viewResultPanel.add(nameLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+        resultSearchButton1.setBackground(new java.awt.Color(50, 132, 255));
+        resultSearchButton1.setForeground(new java.awt.Color(255, 255, 255));
+        resultSearchButton1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        nameField6.setBackground(new java.awt.Color(36, 47, 65));
-        nameField6.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        nameField6.setForeground(new java.awt.Color(204, 204, 204));
-        nameField6.setText("Enter name");
-        nameField6.setBorder(null);
-        nameField6.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel36.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel36.setText("RESULT");
+        resultSearchButton1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 70, 40));
+
+        resultSearchPanel.add(resultSearchButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, 100, 40));
+
+        mainFromResult1.setBackground(new java.awt.Color(36, 47, 65));
+        mainFromResult1.setForeground(new java.awt.Color(255, 255, 255));
+        mainFromResult1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                nameField6MouseClicked(evt);
+                mainFromResult1MouseClicked(evt);
             }
         });
-        nameField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameField6ActionPerformed(evt);
-            }
-        });
-        viewResultPanel.add(nameField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 200, 40));
-        viewResultPanel.add(jSeparator32, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 200, -1));
+        mainFromResult1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        idLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        idLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        idLabel6.setText("ID");
-        viewResultPanel.add(idLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
+        jLabel42.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel42.setText("BACK TO MAIN MENU");
+        mainFromResult1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 50));
+        mainFromResult1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 150, 20));
 
-        idField6.setBackground(new java.awt.Color(36, 47, 65));
-        idField6.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        idField6.setForeground(new java.awt.Color(204, 204, 204));
-        idField6.setText("Enter student ID");
-        idField6.setBorder(null);
-        idField6.addMouseListener(new java.awt.event.MouseAdapter() {
+        resultSearchPanel.add(mainFromResult1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 170, 50));
+
+        resultSearchField1.setBackground(new java.awt.Color(36, 47, 65));
+        resultSearchField1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultSearchField1.setForeground(new java.awt.Color(204, 204, 204));
+        resultSearchField1.setText("Enter Student ID");
+        resultSearchField1.setBorder(null);
+        resultSearchField1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                idField6MouseClicked(evt);
+                resultSearchField1MouseClicked(evt);
             }
         });
-        idField6.addActionListener(new java.awt.event.ActionListener() {
+        resultSearchField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idField6ActionPerformed(evt);
+                resultSearchField1ActionPerformed(evt);
             }
         });
-        viewResultPanel.add(idField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 200, 40));
-        viewResultPanel.add(jSeparator33, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 200, -1));
+        resultSearchPanel.add(resultSearchField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 330, 40));
+        resultSearchPanel.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 330, 30));
 
-        fathersNameField6.setBackground(new java.awt.Color(36, 47, 65));
-        fathersNameField6.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        fathersNameField6.setForeground(new java.awt.Color(204, 204, 204));
-        fathersNameField6.setText("Enter name");
-        fathersNameField6.setBorder(null);
-        fathersNameField6.addMouseListener(new java.awt.event.MouseAdapter() {
+        resultPanel.add(resultSearchPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        resultViewPanel.setBackground(new java.awt.Color(36, 47, 65));
+        resultViewPanel.setForeground(new java.awt.Color(204, 204, 204));
+        resultViewPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        mainFromResult4.setBackground(new java.awt.Color(36, 47, 65));
+        mainFromResult4.setForeground(new java.awt.Color(255, 255, 255));
+        mainFromResult4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fathersNameField6MouseClicked(evt);
+                mainFromResult4MouseClicked(evt);
             }
         });
-        fathersNameField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fathersNameField6ActionPerformed(evt);
-            }
-        });
-        viewResultPanel.add(fathersNameField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 200, 40));
+        mainFromResult4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel33.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel33.setText("SELECTED COURSES:");
-        viewResultPanel.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, -1, -1));
-        viewResultPanel.add(jSeparator34, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 200, -1));
+        jLabel49.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel49.setText("BACK TO MAIN MENU");
+        mainFromResult4.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 50));
+        mainFromResult4.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 150, 20));
 
-        genderLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        genderLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        genderLabel6.setText("GENDER");
-        viewResultPanel.add(genderLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
-        viewResultPanel.add(jSeparator35, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 200, -1));
+        resultViewPanel.add(mainFromResult4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 170, 50));
 
-        jList14.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "CSE121", "CSE 122", "CSE 123", "CSE 221", "CSE 222", "CSE 223" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane14.setViewportView(jList14);
+        jLabel18.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Result");
+        resultViewPanel.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 190, 40));
 
-        viewResultPanel.add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 90, 110, 230));
+        resultPanel.add(resultViewPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jList15.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "CSE121", "CSE 122", "CSE 123", "CSE 221", "CSE 222", "CSE 223" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane15.setViewportView(jList15);
-
-        viewResultPanel.add(jScrollPane15, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 120, 230));
-
-        motherLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        motherLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        motherLabel6.setText("MOTHER'S NAME");
-        viewResultPanel.add(motherLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
-
-        femaleCheck6.setBackground(new java.awt.Color(36, 47, 65));
-        femaleCheck6.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        femaleCheck6.setForeground(new java.awt.Color(255, 255, 255));
-        femaleCheck6.setText("FEMALE");
-        femaleCheck6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                femaleCheck6ActionPerformed(evt);
-            }
-        });
-        viewResultPanel.add(femaleCheck6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, -1, -1));
-
-        maleCheck6.setBackground(new java.awt.Color(36, 47, 65));
-        maleCheck6.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        maleCheck6.setForeground(new java.awt.Color(255, 255, 255));
-        maleCheck6.setText("MALE");
-        maleCheck6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                maleCheck6ActionPerformed(evt);
-            }
-        });
-        viewResultPanel.add(maleCheck6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, -1, -1));
-
-        removeButtonPanel6.setBackground(new java.awt.Color(50, 132, 255));
-        removeButtonPanel6.setForeground(new java.awt.Color(255, 255, 255));
-        viewResultPanel.add(removeButtonPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 200, 90, 40));
-
-        createProfileButtonPanel6.setBackground(new java.awt.Color(50, 132, 255));
-        createProfileButtonPanel6.setForeground(new java.awt.Color(255, 255, 255));
-        createProfileButtonPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel35.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel35.setText("CREATE PROFILE");
-        createProfileButtonPanel6.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 140, 30));
-
-        viewResultPanel.add(createProfileButtonPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, 180, 50));
-
-        addButtonPanel6.setBackground(new java.awt.Color(50, 132, 255));
-        addButtonPanel6.setForeground(new java.awt.Color(255, 255, 255));
-        viewResultPanel.add(addButtonPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 140, 90, 40));
-
-        showSelectedCourses6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        showSelectedCourses6.setForeground(new java.awt.Color(255, 0, 102));
-        showSelectedCourses6.setText("0");
-        viewResultPanel.add(showSelectedCourses6, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 360, 70, 20));
-
-        mothersNameField6.setBackground(new java.awt.Color(36, 47, 65));
-        mothersNameField6.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        mothersNameField6.setForeground(new java.awt.Color(204, 204, 204));
-        mothersNameField6.setText("Enter name");
-        mothersNameField6.setBorder(null);
-        mothersNameField6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                mothersNameField6MouseClicked(evt);
-            }
-        });
-        mothersNameField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mothersNameField6ActionPerformed(evt);
-            }
-        });
-        viewResultPanel.add(mothersNameField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 200, 40));
-
-        fatherLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        fatherLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        fatherLabel6.setText("FATHER'S NAME");
-        viewResultPanel.add(fatherLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
-
-        mainFromResult.setBackground(new java.awt.Color(36, 47, 65));
-        mainFromResult.setForeground(new java.awt.Color(255, 255, 255));
-        mainFromResult.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                mainFromResultMouseClicked(evt);
-            }
-        });
-        mainFromResult.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel39.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel39.setText("BACK TO MAIN MENU");
-        mainFromResult.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 50));
-        mainFromResult.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 160, 20));
-
-        viewResultPanel.add(mainFromResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 170, 50));
-
-        add(viewResultPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(resultPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void nameField4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nameField4MouseClicked
@@ -881,234 +656,165 @@ public class AddPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_mothersNameField4ActionPerformed
 
-    private void nameField6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nameField6MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameField6MouseClicked
-
-    private void nameField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameField6ActionPerformed
-
-    private void idField6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_idField6MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_idField6MouseClicked
-
-    private void idField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_idField6ActionPerformed
-
-    private void fathersNameField6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fathersNameField6MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fathersNameField6MouseClicked
-
-    private void fathersNameField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fathersNameField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fathersNameField6ActionPerformed
-
-    private void femaleCheck6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_femaleCheck6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_femaleCheck6ActionPerformed
-
-    private void maleCheck6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maleCheck6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_maleCheck6ActionPerformed
-
-    private void mothersNameField6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mothersNameField6MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mothersNameField6MouseClicked
-
-    private void mothersNameField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mothersNameField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mothersNameField6ActionPerformed
+    private void viewResultButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewResultButtonMouseClicked
+        //Need to implement dynamic views after setting up search fucntion
+        displayResultPanel(true, false);
+    }//GEN-LAST:event_viewResultButtonMouseClicked
 
     private void admitStudentButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admitStudentButtonMouseClicked
-        // TODO add your handling code here:
         panelVisiblity(false, true, false, false);
     }//GEN-LAST:event_admitStudentButtonMouseClicked
 
-    private void viewResultButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewResultButtonMouseClicked
-        // TODO add your handling code here:
-        panelVisiblity(false, false, false, true);
-    }//GEN-LAST:event_viewResultButtonMouseClicked
-
-    private void dropStudentButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dropStudentButtonMouseClicked
-        // TODO add your handling code here:
-        panelVisiblity(false, false, true, false);
-    }//GEN-LAST:event_dropStudentButtonMouseClicked
-
     private void mainFromAdmitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainFromAdmitMouseClicked
-        // TODO add your handling code here:
-        panelVisiblity(true, false, false, false);
+        panelVisiblity(true, false, false, false); //DONE
     }//GEN-LAST:event_mainFromAdmitMouseClicked
 
-    private void mainFromResultMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainFromResultMouseClicked
-        // TODO add your handling code here:
-        panelVisiblity(true, false, false, false);
-    }//GEN-LAST:event_mainFromResultMouseClicked
+    private void dropStudentButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dropStudentButtonMouseClicked
+        //Need to implement dynamic views after setting up search fucntion
+        displayDropStudentPanel(true, false);
+    }//GEN-LAST:event_dropStudentButtonMouseClicked
 
-    private void nameField7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nameField7MouseClicked
+    private void findStudentFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_findStudentFieldMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_nameField7MouseClicked
+    }//GEN-LAST:event_findStudentFieldMouseClicked
 
-    private void nameField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameField7ActionPerformed
+    private void findStudentFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findStudentFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nameField7ActionPerformed
+    }//GEN-LAST:event_findStudentFieldActionPerformed
 
-    private void idField7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_idField7MouseClicked
+    private void findStudentDropFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_findStudentDropFieldMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_idField7MouseClicked
+    }//GEN-LAST:event_findStudentDropFieldMouseClicked
 
-    private void idField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idField7ActionPerformed
+    private void findStudentDropFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findStudentDropFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_idField7ActionPerformed
+    }//GEN-LAST:event_findStudentDropFieldActionPerformed
 
-    private void fathersNameField7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fathersNameField7MouseClicked
+    private void mainFromDrop1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainFromDrop1MouseClicked
+        panelVisiblity(true, false, false, false); //DONE
+    }//GEN-LAST:event_mainFromDrop1MouseClicked
+
+    private void mainFromDrop2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainFromDrop2MouseClicked
+        panelVisiblity(true, false, false, false); //DONE
+    }//GEN-LAST:event_mainFromDrop2MouseClicked
+
+    private void mainFromResult1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainFromResult1MouseClicked
+       panelVisiblity(true, false, false, false); //DONE
+    }//GEN-LAST:event_mainFromResult1MouseClicked
+
+    private void resultSearchField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_resultSearchField1MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_fathersNameField7MouseClicked
+    }//GEN-LAST:event_resultSearchField1MouseClicked
 
-    private void fathersNameField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fathersNameField7ActionPerformed
+    private void resultSearchField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultSearchField1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fathersNameField7ActionPerformed
+    }//GEN-LAST:event_resultSearchField1ActionPerformed
 
-    private void femaleCheck7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_femaleCheck7ActionPerformed
+    private void mainFromResult4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainFromResult4MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_femaleCheck7ActionPerformed
+    }//GEN-LAST:event_mainFromResult4MouseClicked
 
-    private void maleCheck7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maleCheck7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_maleCheck7ActionPerformed
-
-    private void mothersNameField7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mothersNameField7MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mothersNameField7MouseClicked
-
-    private void mothersNameField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mothersNameField7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mothersNameField7ActionPerformed
-
-    private void mainFromDropMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainFromDropMouseClicked
-        // TODO add your handling code here:
-        panelVisiblity(true, false, false, false);
-    }//GEN-LAST:event_mainFromDropMouseClicked
-
-    public void panelVisiblity(boolean welcomePanel, boolean addStudentPanel, boolean dropStudentPanel, boolean viewResultPanel){
+    //These methods are for displaying the Drop Student Panel  
+    private void displayDropStudentPanel(boolean search, boolean found) {
+        panelVisiblity(false,false, true, false);
+        this.dropSearchStudentPanel.setVisible(search);
+        this.dropFoundStudentPanel.setVisible(found);
+    }
+    
+    //These methods are for displaying the Result Panel  
+    private void displayResultPanel(boolean search, boolean view) {
+        panelVisiblity(false,false, false, true);
+        this.resultSearchPanel.setVisible(search);
+        this.resultViewPanel.setVisible(view);
+    }
+    
+    private void panelVisiblity(boolean welcomePanel, boolean addStudentPanel, boolean dropStudentPanel, boolean viewResultPanel){
         this.welcomePanel.setVisible(welcomePanel);
         this.addStudentPanel.setVisible(addStudentPanel);
         this.dropStudentPanel.setVisible(dropStudentPanel);
-        this.viewResultPanel.setVisible(viewResultPanel);
+        this.resultPanel.setVisible(viewResultPanel);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel addButtonPanel3;
     private javax.swing.JPanel addButtonPanel4;
     private javax.swing.JPanel addButtonPanel5;
-    private javax.swing.JPanel addButtonPanel6;
-    private javax.swing.JPanel addButtonPanel7;
     private javax.swing.JPanel addStudentPanel;
     private javax.swing.JPanel admitStudentButton;
-    private javax.swing.JPanel createProfileButtonPanel12;
     private javax.swing.JPanel createProfileButtonPanel4;
-    private javax.swing.JPanel createProfileButtonPanel6;
+    private javax.swing.JPanel dropFoundStudentPanel;
+    private javax.swing.JPanel dropSearchStudentPanel;
     private javax.swing.JPanel dropStudentButton;
     private javax.swing.JPanel dropStudentPanel;
+    private javax.swing.JPanel dropStudentSearchButton1;
+    private javax.swing.JPanel dropStudentSearchButton2;
+    private javax.swing.JLabel dropStudentSearchButtonLabel1;
+    private javax.swing.JLabel dropStudentSearchButtonLabel2;
     private javax.swing.JLabel fatherLabel4;
-    private javax.swing.JLabel fatherLabel6;
-    private javax.swing.JLabel fatherLabel7;
     private javax.swing.JTextField fathersNameField4;
-    private javax.swing.JTextField fathersNameField6;
-    private javax.swing.JTextField fathersNameField7;
     private javax.swing.JRadioButton femaleCheck4;
-    private javax.swing.JRadioButton femaleCheck6;
-    private javax.swing.JRadioButton femaleCheck7;
+    private javax.swing.JPanel findButton;
+    private javax.swing.JTextField findStudentDropField;
+    private javax.swing.JTextField findStudentField;
     private javax.swing.JLabel genderLabel4;
-    private javax.swing.JLabel genderLabel6;
-    private javax.swing.JLabel genderLabel7;
     private javax.swing.JTextField idField4;
-    private javax.swing.JTextField idField6;
-    private javax.swing.JTextField idField7;
     private javax.swing.JLabel idLabel4;
-    private javax.swing.JLabel idLabel6;
-    private javax.swing.JLabel idLabel7;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JList<String> jList10;
     private javax.swing.JList<String> jList11;
-    private javax.swing.JList<String> jList14;
-    private javax.swing.JList<String> jList15;
-    private javax.swing.JList<String> jList16;
-    private javax.swing.JList<String> jList17;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
-    private javax.swing.JScrollPane jScrollPane14;
-    private javax.swing.JScrollPane jScrollPane15;
-    private javax.swing.JScrollPane jScrollPane16;
-    private javax.swing.JScrollPane jScrollPane17;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator12;
+    private javax.swing.JSeparator jSeparator13;
+    private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator21;
     private javax.swing.JSeparator jSeparator22;
     private javax.swing.JSeparator jSeparator23;
     private javax.swing.JSeparator jSeparator24;
     private javax.swing.JSeparator jSeparator25;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator31;
-    private javax.swing.JSeparator jSeparator32;
-    private javax.swing.JSeparator jSeparator33;
-    private javax.swing.JSeparator jSeparator34;
-    private javax.swing.JSeparator jSeparator35;
-    private javax.swing.JSeparator jSeparator36;
-    private javax.swing.JSeparator jSeparator37;
-    private javax.swing.JSeparator jSeparator38;
-    private javax.swing.JSeparator jSeparator39;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator40;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
     private javax.swing.JPanel mainFromAdmit;
-    private javax.swing.JPanel mainFromDrop;
-    private javax.swing.JPanel mainFromResult;
+    private javax.swing.JPanel mainFromDrop1;
+    private javax.swing.JPanel mainFromDrop2;
+    private javax.swing.JPanel mainFromResult1;
+    private javax.swing.JPanel mainFromResult4;
     private javax.swing.JRadioButton maleCheck4;
-    private javax.swing.JRadioButton maleCheck6;
-    private javax.swing.JRadioButton maleCheck7;
     private javax.swing.JLabel motherLabel4;
-    private javax.swing.JLabel motherLabel6;
-    private javax.swing.JLabel motherLabel7;
     private javax.swing.JTextField mothersNameField4;
-    private javax.swing.JTextField mothersNameField6;
-    private javax.swing.JTextField mothersNameField7;
     private javax.swing.JTextField nameField4;
-    private javax.swing.JTextField nameField6;
-    private javax.swing.JTextField nameField7;
     private javax.swing.JLabel nameLabel4;
-    private javax.swing.JLabel nameLabel6;
-    private javax.swing.JLabel nameLabel7;
-    private javax.swing.JPanel removeButtonPanel6;
-    private javax.swing.JPanel removeButtonPanel7;
+    private javax.swing.JPanel resultPanel;
+    private javax.swing.JPanel resultSearchButton1;
+    private javax.swing.JTextField resultSearchField1;
+    private javax.swing.JPanel resultSearchPanel;
+    private javax.swing.JPanel resultViewPanel;
     private javax.swing.JLabel showSelectedCourses4;
-    private javax.swing.JLabel showSelectedCourses6;
-    private javax.swing.JLabel showSelectedCourses7;
     private javax.swing.JPanel viewResultButton;
-    private javax.swing.JPanel viewResultPanel;
     private javax.swing.JPanel welcomePanel;
     private javax.swing.JLabel welcomeText;
     // End of variables declaration//GEN-END:variables
