@@ -5,19 +5,38 @@
  */
 package bd.edu.daffodilvarsity.studentdatabase;
 
+import java.awt.Color;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.nio.file.*;
+import java.util.ArrayList;
+import java.util.Objects;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Mushfiqus Salehin
  */
 public class AddPanel extends javax.swing.JPanel {
-
+    
+    //Custom variables
+    private ArrayList<Student> students = new ArrayList();
+    private Student student = new Student();
+    private ArrayList<Course> courses = new ArrayList<>(6);
+    private int mainCourseCount = 0;
+    
     /**
      * Creates new form AddPanel
      */
     public AddPanel() {
         initComponents();
         panelVisiblity(true, false, false, false);
+        if (checkSaveFile()){
+            loadStudentData();
+        }
     }
 
     /**
@@ -49,35 +68,45 @@ public class AddPanel extends javax.swing.JPanel {
         jSeparator21 = new javax.swing.JSeparator();
         jLabel12 = new javax.swing.JLabel();
         nameLabel4 = new javax.swing.JLabel();
-        nameField4 = new javax.swing.JTextField();
+        addStudentFullName = new javax.swing.JTextField();
         jSeparator22 = new javax.swing.JSeparator();
         idLabel4 = new javax.swing.JLabel();
-        idField4 = new javax.swing.JTextField();
+        addStudentID = new javax.swing.JTextField();
         jSeparator23 = new javax.swing.JSeparator();
-        fathersNameField4 = new javax.swing.JTextField();
+        addFathersNameField = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
         jSeparator24 = new javax.swing.JSeparator();
         genderLabel4 = new javax.swing.JLabel();
         jSeparator25 = new javax.swing.JSeparator();
-        jScrollPane10 = new javax.swing.JScrollPane();
-        jList10 = new javax.swing.JList<>();
-        jScrollPane11 = new javax.swing.JScrollPane();
-        jList11 = new javax.swing.JList<>();
         motherLabel4 = new javax.swing.JLabel();
-        femaleCheck4 = new javax.swing.JRadioButton();
-        maleCheck4 = new javax.swing.JRadioButton();
+        addFemaleCheck = new javax.swing.JRadioButton();
+        addMaleCheck = new javax.swing.JRadioButton();
         createProfileButtonPanel4 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
-        addButtonPanel4 = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        showSelectedCourses4 = new javax.swing.JLabel();
-        mothersNameField4 = new javax.swing.JTextField();
+        showSelectedCoursesCount = new javax.swing.JLabel();
+        addMothersNameField = new javax.swing.JTextField();
         fatherLabel4 = new javax.swing.JLabel();
         mainFromAdmit = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
-        addButtonPanel5 = new javax.swing.JPanel();
-        jLabel28 = new javax.swing.JLabel();
+        cse101CheckBox = new javax.swing.JCheckBox();
+        cse201CheckBox = new javax.swing.JCheckBox();
+        cse301CheckBox = new javax.swing.JCheckBox();
+        cse102CheckBox = new javax.swing.JCheckBox();
+        cse202CheckBox = new javax.swing.JCheckBox();
+        cse302CheckBox = new javax.swing.JCheckBox();
+        cse103CheckBox = new javax.swing.JCheckBox();
+        cse203CheckBox = new javax.swing.JCheckBox();
+        cse303CheckBox = new javax.swing.JCheckBox();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        showSelectedLabCoursesCount = new javax.swing.JLabel();
+        cse111CheckBox = new javax.swing.JCheckBox();
+        cse112CheckBox = new javax.swing.JCheckBox();
+        cse211CheckBox = new javax.swing.JCheckBox();
+        cse212CheckBox = new javax.swing.JCheckBox();
+        cse311CheckBox = new javax.swing.JCheckBox();
+        cse312CheckBox = new javax.swing.JCheckBox();
         dropStudentPanel = new javax.swing.JPanel();
         dropSearchStudentPanel = new javax.swing.JPanel();
         jSeparator12 = new javax.swing.JSeparator();
@@ -228,22 +257,17 @@ public class AddPanel extends javax.swing.JPanel {
         nameLabel4.setText("FULL NAME");
         addStudentPanel.add(nameLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
-        nameField4.setBackground(new java.awt.Color(36, 47, 65));
-        nameField4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        nameField4.setForeground(new java.awt.Color(204, 204, 204));
-        nameField4.setText("Enter name");
-        nameField4.setBorder(null);
-        nameField4.addMouseListener(new java.awt.event.MouseAdapter() {
+        addStudentFullName.setBackground(new java.awt.Color(36, 47, 65));
+        addStudentFullName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        addStudentFullName.setForeground(new java.awt.Color(204, 204, 204));
+        addStudentFullName.setText("Enter name");
+        addStudentFullName.setBorder(null);
+        addStudentFullName.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                nameField4MouseClicked(evt);
+                addStudentFullNameMouseClicked(evt);
             }
         });
-        nameField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameField4ActionPerformed(evt);
-            }
-        });
-        addStudentPanel.add(nameField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 200, 40));
+        addStudentPanel.add(addStudentFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 200, 40));
         addStudentPanel.add(jSeparator22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 200, -1));
 
         idLabel4.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
@@ -251,45 +275,35 @@ public class AddPanel extends javax.swing.JPanel {
         idLabel4.setText("ID");
         addStudentPanel.add(idLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
 
-        idField4.setBackground(new java.awt.Color(36, 47, 65));
-        idField4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        idField4.setForeground(new java.awt.Color(204, 204, 204));
-        idField4.setText("Enter student ID");
-        idField4.setBorder(null);
-        idField4.addMouseListener(new java.awt.event.MouseAdapter() {
+        addStudentID.setBackground(new java.awt.Color(36, 47, 65));
+        addStudentID.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        addStudentID.setForeground(new java.awt.Color(204, 204, 204));
+        addStudentID.setText("Enter student ID");
+        addStudentID.setBorder(null);
+        addStudentID.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                idField4MouseClicked(evt);
+                addStudentIDMouseClicked(evt);
             }
         });
-        idField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idField4ActionPerformed(evt);
-            }
-        });
-        addStudentPanel.add(idField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 200, 40));
+        addStudentPanel.add(addStudentID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 200, 40));
         addStudentPanel.add(jSeparator23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 200, -1));
 
-        fathersNameField4.setBackground(new java.awt.Color(36, 47, 65));
-        fathersNameField4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        fathersNameField4.setForeground(new java.awt.Color(204, 204, 204));
-        fathersNameField4.setText("Enter name");
-        fathersNameField4.setBorder(null);
-        fathersNameField4.addMouseListener(new java.awt.event.MouseAdapter() {
+        addFathersNameField.setBackground(new java.awt.Color(36, 47, 65));
+        addFathersNameField.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        addFathersNameField.setForeground(new java.awt.Color(204, 204, 204));
+        addFathersNameField.setText("Enter name");
+        addFathersNameField.setBorder(null);
+        addFathersNameField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fathersNameField4MouseClicked(evt);
+                addFathersNameFieldMouseClicked(evt);
             }
         });
-        fathersNameField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fathersNameField4ActionPerformed(evt);
-            }
-        });
-        addStudentPanel.add(fathersNameField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 200, 40));
+        addStudentPanel.add(addFathersNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 200, 40));
 
-        jLabel24.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        jLabel24.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("SELECTED COURSES:");
-        addStudentPanel.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, -1, -1));
+        addStudentPanel.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, -1, -1));
         addStudentPanel.add(jSeparator24, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 200, -1));
 
         genderLabel4.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
@@ -298,53 +312,30 @@ public class AddPanel extends javax.swing.JPanel {
         addStudentPanel.add(genderLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
         addStudentPanel.add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 200, -1));
 
-        jList10.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "CSE121", "CSE 122", "CSE 123", "CSE 221", "CSE 222", "CSE 223" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane10.setViewportView(jList10);
-
-        addStudentPanel.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 90, 110, 230));
-
-        jList11.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "CSE121", "CSE 122", "CSE 123", "CSE 221", "CSE 222", "CSE 223" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane11.setViewportView(jList11);
-
-        addStudentPanel.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 120, 230));
-
         motherLabel4.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         motherLabel4.setForeground(new java.awt.Color(255, 255, 255));
         motherLabel4.setText("MOTHER'S NAME");
         addStudentPanel.add(motherLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
 
-        femaleCheck4.setBackground(new java.awt.Color(36, 47, 65));
-        femaleCheck4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        femaleCheck4.setForeground(new java.awt.Color(255, 255, 255));
-        femaleCheck4.setText("FEMALE");
-        femaleCheck4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                femaleCheck4ActionPerformed(evt);
-            }
-        });
-        addStudentPanel.add(femaleCheck4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, -1, -1));
+        addFemaleCheck.setBackground(new java.awt.Color(36, 47, 65));
+        addFemaleCheck.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        addFemaleCheck.setForeground(new java.awt.Color(255, 255, 255));
+        addFemaleCheck.setText("FEMALE");
+        addStudentPanel.add(addFemaleCheck, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, -1, -1));
 
-        maleCheck4.setBackground(new java.awt.Color(36, 47, 65));
-        maleCheck4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        maleCheck4.setForeground(new java.awt.Color(255, 255, 255));
-        maleCheck4.setText("MALE");
-        maleCheck4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                maleCheck4ActionPerformed(evt);
-            }
-        });
-        addStudentPanel.add(maleCheck4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, -1, -1));
+        addMaleCheck.setBackground(new java.awt.Color(36, 47, 65));
+        addMaleCheck.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        addMaleCheck.setForeground(new java.awt.Color(255, 255, 255));
+        addMaleCheck.setText("MALE");
+        addStudentPanel.add(addMaleCheck, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, -1, -1));
 
         createProfileButtonPanel4.setBackground(new java.awt.Color(50, 132, 255));
         createProfileButtonPanel4.setForeground(new java.awt.Color(255, 255, 255));
+        createProfileButtonPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                createProfileButtonPanel4MouseClicked(evt);
+            }
+        });
         createProfileButtonPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel26.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -354,38 +345,22 @@ public class AddPanel extends javax.swing.JPanel {
 
         addStudentPanel.add(createProfileButtonPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, 180, 50));
 
-        addButtonPanel4.setBackground(new java.awt.Color(255, 52, 36));
-        addButtonPanel4.setForeground(new java.awt.Color(255, 255, 255));
-        addButtonPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        showSelectedCoursesCount.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        showSelectedCoursesCount.setForeground(new java.awt.Color(255, 0, 102));
+        showSelectedCoursesCount.setText("0");
+        addStudentPanel.add(showSelectedCoursesCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 180, 70, 40));
 
-        jLabel27.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel27.setText("<<REMOVE");
-        addButtonPanel4.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, 80, -1));
-
-        addStudentPanel.add(addButtonPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 190, 90, 40));
-
-        showSelectedCourses4.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        showSelectedCourses4.setForeground(new java.awt.Color(255, 0, 102));
-        showSelectedCourses4.setText("0");
-        addStudentPanel.add(showSelectedCourses4, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 360, 70, 20));
-
-        mothersNameField4.setBackground(new java.awt.Color(36, 47, 65));
-        mothersNameField4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        mothersNameField4.setForeground(new java.awt.Color(204, 204, 204));
-        mothersNameField4.setText("Enter name");
-        mothersNameField4.setBorder(null);
-        mothersNameField4.addMouseListener(new java.awt.event.MouseAdapter() {
+        addMothersNameField.setBackground(new java.awt.Color(36, 47, 65));
+        addMothersNameField.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        addMothersNameField.setForeground(new java.awt.Color(204, 204, 204));
+        addMothersNameField.setText("Enter name");
+        addMothersNameField.setBorder(null);
+        addMothersNameField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                mothersNameField4MouseClicked(evt);
+                addMothersNameFieldMouseClicked(evt);
             }
         });
-        mothersNameField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mothersNameField4ActionPerformed(evt);
-            }
-        });
-        addStudentPanel.add(mothersNameField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 200, 40));
+        addStudentPanel.add(addMothersNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 200, 40));
 
         fatherLabel4.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         fatherLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -409,16 +384,185 @@ public class AddPanel extends javax.swing.JPanel {
 
         addStudentPanel.add(mainFromAdmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 170, 50));
 
-        addButtonPanel5.setBackground(new java.awt.Color(38, 177, 76));
-        addButtonPanel5.setForeground(new java.awt.Color(255, 255, 255));
-        addButtonPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        cse101CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse101CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse101CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse101CheckBox.setText("CSE 101");
+        cse101CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse101CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse101CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 90, 30));
 
-        jLabel28.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel28.setText("ADD>>");
-        addButtonPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 50, -1));
+        cse201CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse201CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse201CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse201CheckBox.setText("CSE 201");
+        cse201CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse201CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse201CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, 90, 30));
 
-        addStudentPanel.add(addButtonPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 140, 90, 40));
+        cse301CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse301CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse301CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse301CheckBox.setText("CSE 301");
+        cse301CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse301CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse301CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 90, 30));
+
+        cse102CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse102CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse102CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse102CheckBox.setText("CSE 102");
+        cse102CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse102CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse102CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, 90, 30));
+
+        cse202CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse202CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse202CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse202CheckBox.setText("CSE 202");
+        cse202CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse202CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse202CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 90, 30));
+
+        cse302CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse302CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse302CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse302CheckBox.setText("CSE 302");
+        cse302CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse302CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse302CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, 90, 30));
+
+        cse103CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse103CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse103CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse103CheckBox.setText("CSE 103");
+        cse103CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse103CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse103CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 80, 90, 30));
+
+        cse203CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse203CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse203CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse203CheckBox.setText("CSE 203");
+        cse203CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse203CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse203CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 110, 90, 30));
+
+        cse303CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse303CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse303CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse303CheckBox.setText("CSE 303");
+        cse303CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse303CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse303CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 140, 90, 30));
+
+        jLabel13.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("SELECT LAB COURSES");
+        addStudentPanel.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, -1, -1));
+
+        jLabel25.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setText("SELECTED LAB COURSES:");
+        addStudentPanel.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, -1, -1));
+
+        showSelectedLabCoursesCount.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        showSelectedLabCoursesCount.setForeground(new java.awt.Color(255, 0, 102));
+        showSelectedLabCoursesCount.setText("0");
+        addStudentPanel.add(showSelectedLabCoursesCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 400, 100, 40));
+
+        cse111CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse111CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse111CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse111CheckBox.setText("CSE 111");
+        cse111CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse111CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse111CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 90, 30));
+
+        cse112CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse112CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse112CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse112CheckBox.setText("CSE 112");
+        cse112CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse112CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse112CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 90, 30));
+
+        cse211CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse211CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse211CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse211CheckBox.setText("CSE 211");
+        cse211CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse211CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse211CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 320, 90, 30));
+
+        cse212CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse212CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse212CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse212CheckBox.setText("CSE 212");
+        cse212CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse212CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse212CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 350, 90, 30));
+
+        cse311CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse311CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse311CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse311CheckBox.setText("CSE 311");
+        cse311CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse311CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse311CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 320, 90, 30));
+
+        cse312CheckBox.setBackground(new java.awt.Color(36, 47, 65));
+        cse312CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        cse312CheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        cse312CheckBox.setText("CSE 312");
+        cse312CheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cse312CheckBoxActionPerformed(evt);
+            }
+        });
+        addStudentPanel.add(cse312CheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 90, 30));
 
         add(addStudentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -616,45 +760,21 @@ public class AddPanel extends javax.swing.JPanel {
         add(resultPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nameField4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nameField4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameField4MouseClicked
+    private void addStudentFullNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addStudentFullNameMouseClicked
+        this.addStudentFullName.setText("");
+    }//GEN-LAST:event_addStudentFullNameMouseClicked
 
-    private void nameField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameField4ActionPerformed
+    private void addStudentIDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addStudentIDMouseClicked
+        this.addStudentID.setText("");
+    }//GEN-LAST:event_addStudentIDMouseClicked
 
-    private void idField4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_idField4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_idField4MouseClicked
+    private void addFathersNameFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addFathersNameFieldMouseClicked
+        this.addFathersNameField.setText("");
+    }//GEN-LAST:event_addFathersNameFieldMouseClicked
 
-    private void idField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_idField4ActionPerformed
-
-    private void fathersNameField4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fathersNameField4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fathersNameField4MouseClicked
-
-    private void fathersNameField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fathersNameField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fathersNameField4ActionPerformed
-
-    private void femaleCheck4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_femaleCheck4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_femaleCheck4ActionPerformed
-
-    private void maleCheck4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maleCheck4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_maleCheck4ActionPerformed
-
-    private void mothersNameField4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mothersNameField4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mothersNameField4MouseClicked
-
-    private void mothersNameField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mothersNameField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mothersNameField4ActionPerformed
+    private void addMothersNameFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMothersNameFieldMouseClicked
+       this.addMothersNameField.setText("");
+    }//GEN-LAST:event_addMothersNameFieldMouseClicked
 
     private void viewResultButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewResultButtonMouseClicked
         //Need to implement dynamic views after setting up search fucntion
@@ -714,6 +834,499 @@ public class AddPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_mainFromResult4MouseClicked
 
+    private void createProfileButtonPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createProfileButtonPanel4MouseClicked
+        createStudentProfile();
+    }//GEN-LAST:event_createProfileButtonPanel4MouseClicked
+
+    //K THEN LET IT RAIN DATA
+    //GOAL Have to find out a better way to do this without repeating all these codes
+    private void cse101CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse101CheckBoxActionPerformed
+        if(this.cse101CheckBox.isSelected() && this.mainCourseCount < 4) {
+            this.courses.add(new Course(this.cse101CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            if(this.mainCourseCount == 4) {
+                this.showSelectedCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        } else if(this.mainCourseCount >= 4 && this.cse101CheckBox.isSelected()) {
+            cse101CheckBox.setSelected(false);
+        } else {
+            deleteCourse(this.cse101CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        }
+    }//GEN-LAST:event_cse101CheckBoxActionPerformed
+
+    private void cse201CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse201CheckBoxActionPerformed
+        if(this.cse201CheckBox.isSelected() && this.mainCourseCount < 4) {
+            this.courses.add(new Course(this.cse201CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            if(this.mainCourseCount == 4) {
+                this.showSelectedCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        } else if(this.mainCourseCount >= 4 && this.cse201CheckBox.isSelected()) {
+            cse201CheckBox.setSelected(false);
+        } else {
+            deleteCourse(this.cse201CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        }
+    }//GEN-LAST:event_cse201CheckBoxActionPerformed
+
+    private void cse301CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse301CheckBoxActionPerformed
+        if(this.cse301CheckBox.isSelected() && this.mainCourseCount < 4) {
+            this.courses.add(new Course(this.cse301CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            if(this.mainCourseCount == 4) {
+                this.showSelectedCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        } else if(this.mainCourseCount >= 4 && this.cse301CheckBox.isSelected()) {
+            cse301CheckBox.setSelected(false);
+        } else {
+            deleteCourse(this.cse301CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        }
+    }//GEN-LAST:event_cse301CheckBoxActionPerformed
+
+    private void cse102CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse102CheckBoxActionPerformed
+        if(this.cse102CheckBox.isSelected() && this.mainCourseCount < 4) {
+            this.courses.add(new Course(this.cse102CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            if(this.mainCourseCount == 4) {
+                this.showSelectedCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        } else if(this.mainCourseCount >= 4 && this.cse102CheckBox.isSelected()) {
+            cse102CheckBox.setSelected(false);
+        } else {
+            deleteCourse(this.cse102CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        }
+    }//GEN-LAST:event_cse102CheckBoxActionPerformed
+
+    private void cse202CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse202CheckBoxActionPerformed
+        if(this.cse202CheckBox.isSelected() && this.mainCourseCount < 4) {
+            this.courses.add(new Course(this.cse202CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            if(this.mainCourseCount == 4) {
+                this.showSelectedCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        } else if(this.mainCourseCount >= 4 && this.cse202CheckBox.isSelected()) {
+            cse202CheckBox.setSelected(false);
+        } else {
+            deleteCourse(this.cse202CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        }
+    }//GEN-LAST:event_cse202CheckBoxActionPerformed
+
+    private void cse302CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse302CheckBoxActionPerformed
+        if(this.cse302CheckBox.isSelected() && this.mainCourseCount < 4) {
+            this.courses.add(new Course(this.cse302CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            if(this.mainCourseCount == 4) {
+                this.showSelectedCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        } else if(this.mainCourseCount >= 4 && this.cse302CheckBox.isSelected()) {
+            cse302CheckBox.setSelected(false);
+        } else {
+            deleteCourse(this.cse302CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        }
+    }//GEN-LAST:event_cse302CheckBoxActionPerformed
+
+    private void cse103CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse103CheckBoxActionPerformed
+        if(this.cse103CheckBox.isSelected() && this.mainCourseCount < 4) {
+            this.courses.add(new Course(this.cse103CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            if(this.mainCourseCount == 4) {
+                this.showSelectedCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        } else if(this.mainCourseCount >= 4 && this.cse103CheckBox.isSelected()) {
+            cse103CheckBox.setSelected(false);
+        } else {
+            deleteCourse(this.cse103CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        }
+    }//GEN-LAST:event_cse103CheckBoxActionPerformed
+
+    private void cse203CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse203CheckBoxActionPerformed
+        if(this.cse203CheckBox.isSelected() && this.mainCourseCount < 4) {
+            this.courses.add(new Course(this.cse203CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            if(this.mainCourseCount == 4) {
+                this.showSelectedCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        } else if(this.mainCourseCount >= 4 && this.cse203CheckBox.isSelected()) {
+            cse203CheckBox.setSelected(false);
+        }  else {
+            deleteCourse(this.cse203CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        }
+    }//GEN-LAST:event_cse203CheckBoxActionPerformed
+
+    private void cse303CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse303CheckBoxActionPerformed
+        if(this.cse303CheckBox.isSelected() && this.mainCourseCount < 4) {
+            this.courses.add(new Course(this.cse303CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            if(this.mainCourseCount == 4) {
+                this.showSelectedCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        } else if(this.mainCourseCount >= 4 && this.cse303CheckBox.isSelected()) {
+            cse303CheckBox.setSelected(false);
+        } else {
+            deleteCourse(this.cse303CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedCoursesCount.setForeground(Color.RED);
+            this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+        }
+    }//GEN-LAST:event_cse303CheckBoxActionPerformed
+
+    //Lab Checkboxes
+    private void cse111CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse111CheckBoxActionPerformed
+        if(this.cse111CheckBox.isSelected() && this.mainCourseCount < 6 && this.mainCourseCount >= 4) {
+            this.courses.add(new Course(this.cse111CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedLabCoursesCount.setForeground(Color.RED);
+            if(this.mainCourseCount == 6) {
+                this.showSelectedLabCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
+            mainCourseEnabler(false);
+        } else if((this.mainCourseCount < 4 || this.mainCourseCount >= 6) && this.cse111CheckBox.isSelected()) {
+            cse111CheckBox.setSelected(false);
+        } else {
+            deleteCourse(this.cse111CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedLabCoursesCount.setForeground(Color.RED);
+            this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
+        }
+    }//GEN-LAST:event_cse111CheckBoxActionPerformed
+
+    private void cse112CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse112CheckBoxActionPerformed
+        if(this.cse112CheckBox.isSelected() && this.mainCourseCount < 6 && this.mainCourseCount >= 4) {
+            this.courses.add(new Course(this.cse112CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedLabCoursesCount.setForeground(Color.RED);
+            if(this.mainCourseCount == 6) {
+                this.showSelectedLabCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
+            mainCourseEnabler(false);
+        } else if((this.mainCourseCount < 4 || this.mainCourseCount >= 6) && this.cse112CheckBox.isSelected()) {
+            cse112CheckBox.setSelected(false);
+        } else {
+            deleteCourse(this.cse112CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedLabCoursesCount.setForeground(Color.RED);
+            this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
+        }
+    }//GEN-LAST:event_cse112CheckBoxActionPerformed
+
+    private void cse211CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse211CheckBoxActionPerformed
+        if(this.cse211CheckBox.isSelected() && this.mainCourseCount < 6 && this.mainCourseCount >= 4) {
+            this.courses.add(new Course(this.cse211CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedLabCoursesCount.setForeground(Color.RED);
+            if(this.mainCourseCount == 6) {
+                this.showSelectedLabCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
+            mainCourseEnabler(false);
+        } else if((this.mainCourseCount < 4 || this.mainCourseCount >= 6) && this.cse211CheckBox.isSelected()) {
+            cse211CheckBox.setSelected(false);
+        } else {
+            deleteCourse(this.cse211CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedLabCoursesCount.setForeground(Color.RED);
+            this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
+        }
+    }//GEN-LAST:event_cse211CheckBoxActionPerformed
+
+    private void cse212CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse212CheckBoxActionPerformed
+        if(this.cse212CheckBox.isSelected() && this.mainCourseCount < 6 && this.mainCourseCount >= 4) {
+            this.courses.add(new Course(this.cse212CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedLabCoursesCount.setForeground(Color.RED);
+            if(this.mainCourseCount == 6) {
+                this.showSelectedLabCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
+            mainCourseEnabler(false);
+        } else if((this.mainCourseCount < 4 || this.mainCourseCount >= 6) && this.cse212CheckBox.isSelected()) {
+            cse212CheckBox.setSelected(false);
+        } else {
+            deleteCourse(this.cse212CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedLabCoursesCount.setForeground(Color.RED);
+            this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
+        }
+    }//GEN-LAST:event_cse212CheckBoxActionPerformed
+
+    private void cse311CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse311CheckBoxActionPerformed
+        if(this.cse311CheckBox.isSelected() && this.mainCourseCount < 6 && this.mainCourseCount >= 4) {
+            this.courses.add(new Course(this.cse311CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedLabCoursesCount.setForeground(Color.RED);
+            if(this.mainCourseCount == 6) {
+                this.showSelectedLabCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
+            mainCourseEnabler(false);
+        } else if((this.mainCourseCount < 4 || this.mainCourseCount >= 6) && this.cse311CheckBox.isSelected()) {
+            cse311CheckBox.setSelected(false);
+        } else {
+            deleteCourse(this.cse311CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedLabCoursesCount.setForeground(Color.RED);
+            this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
+        }
+    }//GEN-LAST:event_cse311CheckBoxActionPerformed
+
+    private void cse312CheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cse312CheckBoxActionPerformed
+        if(this.cse312CheckBox.isSelected() && this.mainCourseCount < 6 && this.mainCourseCount >= 4) {
+            this.courses.add(new Course(this.cse312CheckBox.getText(), 0.0));
+            this.mainCourseCount++;
+            this.showSelectedLabCoursesCount.setForeground(Color.RED);
+            if (this.mainCourseCount == 6) {
+                this.showSelectedLabCoursesCount.setForeground(Color.GREEN);
+            }
+            this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
+            mainCourseEnabler(false);
+        } else if((this.mainCourseCount < 4 || this.mainCourseCount >= 6) && this.cse312CheckBox.isSelected()) {
+            cse312CheckBox.setSelected(false);
+        } else {
+            deleteCourse(this.cse312CheckBox.getText());
+            this.mainCourseCount--;
+            this.showSelectedLabCoursesCount.setForeground(Color.RED);
+            this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
+        }
+    }//GEN-LAST:event_cse312CheckBoxActionPerformed
+    
+    //This function disables the main course checkboxes
+    
+    private void mainCourseEnabler(boolean value) {
+        this.cse101CheckBox.setEnabled(value);
+        this.cse102CheckBox.setEnabled(value);
+        this.cse103CheckBox.setEnabled(value);
+        this.cse201CheckBox.setEnabled(value);
+        this.cse202CheckBox.setEnabled(value);
+        this.cse203CheckBox.setEnabled(value);
+        this.cse301CheckBox.setEnabled(value);
+        this.cse302CheckBox.setEnabled(value);
+        this.cse303CheckBox.setEnabled(value);
+    }
+    
+    //This fucntion finds the index number of a Course array
+    private void deleteCourse(String courseName) {
+        for(int i = 0; i < this.courses.size(); i++) {
+            if(this.courses.get(i).getCourseName().equals(courseName)) {
+                this.courses.remove(i);
+                return;
+            }
+        }
+    }
+    
+    
+    //Moar data, unverified
+    
+    private boolean addStudentInputERRPRN() {
+        String fullName = this.addStudentFullName.getText();
+        String id = this.addStudentID.getText();
+        String fathersName = this.addFathersNameField.getText();
+        String mothersName = this.addMothersNameField.getText();
+        boolean verifiedFullName = checkFullName(fullName);
+        boolean verifiedID = checkIdNum(id);
+        boolean verifiedFathersName = checkFatherName(fathersName);
+        boolean verifiedMothersName = checkMotherName(mothersName);
+        if(this.addMaleCheck.isSelected() || this.addFemaleCheck.isSelected()) {
+            if (this.addMaleCheck.isSelected()) {
+                String gender = this.addMaleCheck.getText().toString();
+                gender = gender.substring(0,1).toUpperCase() + gender.substring(1);
+                this.student.setGender(gender);
+            }
+            if (this.addFemaleCheck.isSelected()) {
+                String gender = this.addFemaleCheck.getText().toString();
+                gender = gender.substring(0,1).toUpperCase() + gender.substring(1);
+                this.student.setGender(gender);
+            }
+        } else {
+            errorDialogue("Enter student's gender!", -1);
+        }
+        if (!verifiedFullName) {
+            errorDialogue("Enter student's full name!", 0);
+        }
+        if (!verifiedID) {
+            errorDialogue("Please enter the ID in correct format!\n" +
+                               "        Format: 171-15-XXXX", 1);
+        }
+        if (!verifiedFathersName) {
+            errorDialogue("Enter student's father's name!", 2);
+        }
+        if (!verifiedMothersName) {
+            errorDialogue("Enter student's mother's name!", 3);
+        }
+        if(verifiedFullName && verifiedID && verifiedFathersName && verifiedMothersName) {
+            this.student.setIdNum(id);
+            this.student.setFullName(fullName);
+            this.student.setMotherName(mothersName);
+            this.student.setFatherName(fathersName);
+            return true;
+        }
+        return false;
+    }
+    
+    private boolean checkIdNum(String idNum) {
+        if(idNum.length() == 11) {
+            if(Objects.equals(idNum.substring(0, 1), "1") && Objects.equals(idNum.substring(1, 2), "7")  && Objects.equals(idNum.substring(2, 3), "1") && Objects.equals(idNum.substring(3, 4), "-") && Objects.equals(idNum.substring(4, 5), "1") && Objects.equals(idNum.substring(5, 6), "5") && Objects.equals(idNum.substring(6, 7), "-")) {
+                return true;
+            }
+        }
+        return false;
+    }
+    private boolean checkFullName(String fullName) {
+        if(!fullName.equals("")) {
+            return true;
+        }
+        return false;
+    }
+    
+    private boolean checkFatherName(String fatherName) {
+        if(!fatherName.equals("")) {
+            return true;
+        }
+        return false;
+    }
+        
+    private boolean checkMotherName(String motherName) {
+        if(!motherName.equals("")) {
+            return true;
+        }
+        return false;
+    }
+    
+    private void errorDialogue(String messageString, int whichField) {
+        Object[] message = {messageString};
+        Object[] options = {"OK"};
+        int n = JOptionPane.showOptionDialog(new JFrame(),
+                message, "Alert!",
+                JOptionPane.ERROR_MESSAGE, JOptionPane.ERROR_MESSAGE, null,
+                options, options[0]);
+        if(n == JOptionPane.ERROR_MESSAGE && whichField == 0){
+            this.addStudentFullName.setText("");
+        } else if(n == JOptionPane.ERROR_MESSAGE && whichField == 1){
+            this.addStudentID.setText("171-15-XXXX");
+        } else if(n == JOptionPane.ERROR_MESSAGE && whichField == 2){
+            this.addFathersNameField.setText("");
+        } else if(n == JOptionPane.ERROR_MESSAGE && whichField == 3){
+            this.addMothersNameField.setText("");
+        } else {
+            //DO NOTHING JUST DISPLAY MESSAGE
+        }
+    }
+    
+    private boolean addCourseData() {
+        if(this.courses.size()==6) {
+            this.student.setA(new Course(this.courses.get(0).getCourseName(), this.courses.get(0).getGradePoints()));
+            this.student.setB(new Course(this.courses.get(1).getCourseName(), this.courses.get(1).getGradePoints()));
+            this.student.setC(new Course(this.courses.get(2).getCourseName(), this.courses.get(2).getGradePoints()));
+            this.student.setD(new Course(this.courses.get(3).getCourseName(), this.courses.get(3).getGradePoints()));
+            this.student.setE(new Course(this.courses.get(4).getCourseName(), this.courses.get(4).getGradePoints()));
+            this.student.setF(new Course(this.courses.get(5).getCourseName(), this.courses.get(5).getGradePoints()));
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    private void createStudentProfile() {
+        if(addStudentInputERRPRN() && addCourseData()) {
+            addStudent();
+            saveStudentData();
+            refreshData();
+        }
+    }
+
+    //These methods are for adding, dropping students and saving data
+    private void addStudent() {
+        this.students.add(this.student);
+    }
+
+    private void refreshData() {
+        this.students = new ArrayList();
+        this.student = new Student();
+        this.courses = new ArrayList<>(6);
+        this.mainCourseCount = 0;
+    }
+    
+    private void dropStudent(int index) {
+        this.students.remove(index);
+    }
+    
+    private void saveStudentData() {
+        try {
+            FileOutputStream fos = new FileOutputStream("student.dat");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);   
+            oos.writeObject(this.students); // write students to ObjectOutputStream
+            oos.close(); 
+        } catch(Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+    
+    private void loadStudentData() {
+        try {
+            FileInputStream fis = new FileInputStream("student.dat");
+            ObjectInputStream ois = new ObjectInputStream(fis); 
+            this.students = (ArrayList<Student>) ois.readObject(); // write students from ObjectInputStream to this.students
+            ois.close();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    private boolean checkSaveFile() {
+        Path path = Paths.get("student.dat");
+
+        if (Files.exists(path)) {
+            System.out.println("Exists");
+            return true;
+        } else if (Files.notExists(path)) {
+            return false;
+        } else {
+            return false;
+        }
+    }
+    
     //These methods are for displaying the Drop Student Panel  
     private void displayDropStudentPanel(boolean search, boolean found) {
         panelVisiblity(false,false, true, false);
@@ -728,6 +1341,7 @@ public class AddPanel extends javax.swing.JPanel {
         this.resultViewPanel.setVisible(view);
     }
     
+    //This method shows one panel at a time on screen
     private void panelVisiblity(boolean welcomePanel, boolean addStudentPanel, boolean dropStudentPanel, boolean viewResultPanel){
         this.welcomePanel.setVisible(welcomePanel);
         this.addStudentPanel.setVisible(addStudentPanel);
@@ -736,11 +1350,30 @@ public class AddPanel extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel addButtonPanel4;
-    private javax.swing.JPanel addButtonPanel5;
+    private javax.swing.JTextField addFathersNameField;
+    private javax.swing.JRadioButton addFemaleCheck;
+    private javax.swing.JRadioButton addMaleCheck;
+    private javax.swing.JTextField addMothersNameField;
+    private javax.swing.JTextField addStudentFullName;
+    private javax.swing.JTextField addStudentID;
     private javax.swing.JPanel addStudentPanel;
     private javax.swing.JPanel admitStudentButton;
     private javax.swing.JPanel createProfileButtonPanel4;
+    private javax.swing.JCheckBox cse101CheckBox;
+    private javax.swing.JCheckBox cse102CheckBox;
+    private javax.swing.JCheckBox cse103CheckBox;
+    private javax.swing.JCheckBox cse111CheckBox;
+    private javax.swing.JCheckBox cse112CheckBox;
+    private javax.swing.JCheckBox cse201CheckBox;
+    private javax.swing.JCheckBox cse202CheckBox;
+    private javax.swing.JCheckBox cse203CheckBox;
+    private javax.swing.JCheckBox cse211CheckBox;
+    private javax.swing.JCheckBox cse212CheckBox;
+    private javax.swing.JCheckBox cse301CheckBox;
+    private javax.swing.JCheckBox cse302CheckBox;
+    private javax.swing.JCheckBox cse303CheckBox;
+    private javax.swing.JCheckBox cse311CheckBox;
+    private javax.swing.JCheckBox cse312CheckBox;
     private javax.swing.JPanel dropFoundStudentPanel;
     private javax.swing.JPanel dropSearchStudentPanel;
     private javax.swing.JPanel dropStudentButton;
@@ -750,25 +1383,22 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JLabel dropStudentSearchButtonLabel1;
     private javax.swing.JLabel dropStudentSearchButtonLabel2;
     private javax.swing.JLabel fatherLabel4;
-    private javax.swing.JTextField fathersNameField4;
-    private javax.swing.JRadioButton femaleCheck4;
     private javax.swing.JPanel findButton;
     private javax.swing.JTextField findStudentDropField;
     private javax.swing.JTextField findStudentField;
     private javax.swing.JLabel genderLabel4;
-    private javax.swing.JTextField idField4;
     private javax.swing.JLabel idLabel4;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel40;
@@ -778,10 +1408,6 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel49;
-    private javax.swing.JList<String> jList10;
-    private javax.swing.JList<String> jList11;
-    private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator12;
@@ -803,17 +1429,15 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JPanel mainFromDrop2;
     private javax.swing.JPanel mainFromResult1;
     private javax.swing.JPanel mainFromResult4;
-    private javax.swing.JRadioButton maleCheck4;
     private javax.swing.JLabel motherLabel4;
-    private javax.swing.JTextField mothersNameField4;
-    private javax.swing.JTextField nameField4;
     private javax.swing.JLabel nameLabel4;
     private javax.swing.JPanel resultPanel;
     private javax.swing.JPanel resultSearchButton1;
     private javax.swing.JTextField resultSearchField1;
     private javax.swing.JPanel resultSearchPanel;
     private javax.swing.JPanel resultViewPanel;
-    private javax.swing.JLabel showSelectedCourses4;
+    private javax.swing.JLabel showSelectedCoursesCount;
+    private javax.swing.JLabel showSelectedLabCoursesCount;
     private javax.swing.JPanel viewResultButton;
     private javax.swing.JPanel welcomePanel;
     private javax.swing.JLabel welcomeText;
