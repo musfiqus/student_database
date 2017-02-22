@@ -63,6 +63,9 @@ public class AddPanel extends javax.swing.JPanel {
         jLabel43 = new javax.swing.JLabel();
         jSeparator9 = new javax.swing.JSeparator();
         findStudentField = new javax.swing.JTextField();
+        admitStudentButton1 = new javax.swing.JPanel();
+        jLabel44 = new javax.swing.JLabel();
+        jSeparator6 = new javax.swing.JSeparator();
         addStudentPanel = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jSeparator21 = new javax.swing.JSeparator();
@@ -151,7 +154,7 @@ public class AddPanel extends javax.swing.JPanel {
         welcomeText.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         welcomeText.setForeground(new java.awt.Color(255, 255, 255));
         welcomeText.setText("Welcome to Student Database");
-        welcomePanel.add(welcomeText, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 360, 50));
+        welcomePanel.add(welcomeText, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 420, 50));
 
         findButton.setBackground(new java.awt.Color(50, 132, 255));
         findButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -160,12 +163,12 @@ public class AddPanel extends javax.swing.JPanel {
         jLabel23.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("FIND");
-        findButton.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 40, 40));
+        findButton.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 70, 40));
 
-        welcomePanel.add(findButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, 100, 40));
+        welcomePanel.add(findButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, 90, 40));
         welcomePanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 330, 30));
 
-        viewResultButton.setBackground(new java.awt.Color(50, 132, 255));
+        viewResultButton.setBackground(new java.awt.Color(36, 47, 65));
         viewResultButton.setForeground(new java.awt.Color(255, 255, 255));
         viewResultButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -174,15 +177,15 @@ public class AddPanel extends javax.swing.JPanel {
         });
         viewResultButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel40.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel40.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel40.setText("VIEW RESULT");
-        viewResultButton.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 120, 50));
-        viewResultButton.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 130, 20));
+        jLabel40.setText("RESULT");
+        viewResultButton.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 30));
+        viewResultButton.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 80, 20));
 
-        welcomePanel.add(viewResultButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 450, 180, 50));
+        welcomePanel.add(viewResultButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 450, 80, 50));
 
-        admitStudentButton.setBackground(new java.awt.Color(50, 132, 255));
+        admitStudentButton.setBackground(new java.awt.Color(36, 47, 65));
         admitStudentButton.setForeground(new java.awt.Color(255, 255, 255));
         admitStudentButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -191,15 +194,15 @@ public class AddPanel extends javax.swing.JPanel {
         });
         admitStudentButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel41.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel41.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel41.setText("ADMIT STUDENT");
-        admitStudentButton.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 50));
-        admitStudentButton.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 160, 20));
+        jLabel41.setText("ADMIT");
+        admitStudentButton.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 30));
+        admitStudentButton.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 70, 20));
 
-        welcomePanel.add(admitStudentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 180, 50));
+        welcomePanel.add(admitStudentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 450, 70, 50));
 
-        dropStudentButton.setBackground(new java.awt.Color(50, 132, 255));
+        dropStudentButton.setBackground(new java.awt.Color(36, 47, 65));
         dropStudentButton.setForeground(new java.awt.Color(255, 255, 255));
         dropStudentButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -208,13 +211,13 @@ public class AddPanel extends javax.swing.JPanel {
         });
         dropStudentButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel43.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel43.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel43.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel43.setText("DROP STUDENT");
-        dropStudentButton.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 140, 50));
-        dropStudentButton.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 150, 20));
+        jLabel43.setText("EDIT OR DROP");
+        dropStudentButton.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 130, 30));
+        dropStudentButton.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 140, 20));
 
-        welcomePanel.add(dropStudentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, 180, 50));
+        welcomePanel.add(dropStudentButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 450, 140, 50));
 
         findStudentField.setBackground(new java.awt.Color(36, 47, 65));
         findStudentField.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
@@ -232,6 +235,23 @@ public class AddPanel extends javax.swing.JPanel {
             }
         });
         welcomePanel.add(findStudentField, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 330, 40));
+
+        admitStudentButton1.setBackground(new java.awt.Color(36, 47, 65));
+        admitStudentButton1.setForeground(new java.awt.Color(255, 255, 255));
+        admitStudentButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                admitStudentButton1MouseClicked(evt);
+            }
+        });
+        admitStudentButton1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel44.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel44.setText("UPDATE");
+        admitStudentButton1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 30));
+        admitStudentButton1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 90, 20));
+
+        welcomePanel.add(admitStudentButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, 90, 50));
 
         add(welcomePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -338,17 +358,17 @@ public class AddPanel extends javax.swing.JPanel {
         });
         createProfileButtonPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel26.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel26.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setText("CREATE PROFILE");
-        createProfileButtonPanel4.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 140, 30));
+        createProfileButtonPanel4.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 160, 50));
 
-        addStudentPanel.add(createProfileButtonPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, 180, 50));
+        addStudentPanel.add(createProfileButtonPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, 190, 50));
 
         showSelectedCoursesCount.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         showSelectedCoursesCount.setForeground(new java.awt.Color(255, 0, 102));
         showSelectedCoursesCount.setText("0");
-        addStudentPanel.add(showSelectedCoursesCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 180, 70, 40));
+        addStudentPanel.add(showSelectedCoursesCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 180, 60, 40));
 
         addMothersNameField.setBackground(new java.awt.Color(36, 47, 65));
         addMothersNameField.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
@@ -376,11 +396,11 @@ public class AddPanel extends javax.swing.JPanel {
         });
         mainFromAdmit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel38.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jLabel38.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(255, 255, 255));
         jLabel38.setText("BACK TO MAIN MENU");
-        mainFromAdmit.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 50));
-        mainFromAdmit.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 160, 20));
+        mainFromAdmit.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 140, 40));
+        mainFromAdmit.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 140, 20));
 
         addStudentPanel.add(mainFromAdmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 170, 50));
 
@@ -496,7 +516,7 @@ public class AddPanel extends javax.swing.JPanel {
         showSelectedLabCoursesCount.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         showSelectedLabCoursesCount.setForeground(new java.awt.Color(255, 0, 102));
         showSelectedLabCoursesCount.setText("0");
-        addStudentPanel.add(showSelectedLabCoursesCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 400, 100, 40));
+        addStudentPanel.add(showSelectedLabCoursesCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 400, 100, 40));
 
         cse111CheckBox.setBackground(new java.awt.Color(36, 47, 65));
         cse111CheckBox.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -615,15 +635,15 @@ public class AddPanel extends javax.swing.JPanel {
 
         dropStudentSearchButtonLabel1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         dropStudentSearchButtonLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        dropStudentSearchButtonLabel1.setText("DROP");
-        dropStudentSearchButton1.add(dropStudentSearchButtonLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 70, 40));
+        dropStudentSearchButtonLabel1.setText("FIND");
+        dropStudentSearchButton1.add(dropStudentSearchButtonLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 70, 40));
 
-        dropSearchStudentPanel.add(dropStudentSearchButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, 100, 40));
+        dropSearchStudentPanel.add(dropStudentSearchButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, 90, 40));
 
         jLabel16.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Drop Student");
-        dropSearchStudentPanel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 190, 40));
+        dropSearchStudentPanel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 240, 40));
 
         dropStudentPanel.add(dropSearchStudentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -688,7 +708,7 @@ public class AddPanel extends javax.swing.JPanel {
         jLabel36.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(255, 255, 255));
         jLabel36.setText("RESULT");
-        resultSearchButton1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 70, 40));
+        resultSearchButton1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 80, 40));
 
         resultSearchPanel.add(resultSearchButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, 100, 40));
 
@@ -1131,6 +1151,10 @@ public class AddPanel extends javax.swing.JPanel {
             this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
         }
     }//GEN-LAST:event_cse312CheckBoxActionPerformed
+
+    private void admitStudentButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admitStudentButton1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_admitStudentButton1MouseClicked
     
     //This function disables the main course checkboxes
     
@@ -1358,6 +1382,7 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JTextField addStudentID;
     private javax.swing.JPanel addStudentPanel;
     private javax.swing.JPanel admitStudentButton;
+    private javax.swing.JPanel admitStudentButton1;
     private javax.swing.JPanel createProfileButtonPanel4;
     private javax.swing.JCheckBox cse101CheckBox;
     private javax.swing.JCheckBox cse102CheckBox;
@@ -1405,6 +1430,7 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel49;
@@ -1421,6 +1447,7 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
