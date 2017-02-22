@@ -6,11 +6,6 @@
 package bd.edu.daffodilvarsity.studentdatabase;
 
 import java.awt.Color;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.Objects;
 import javax.swing.JFrame;
@@ -23,7 +18,8 @@ import javax.swing.JOptionPane;
 public class AddPanel extends javax.swing.JPanel {
     
     //Custom variables
-    private ArrayList<Student> students = new ArrayList();
+    private DataHandler dataLoader = new DataHandler();
+    private ArrayList<Student> students = dataLoader.getStudents();
     private Student student = new Student();
     private ArrayList<Course> courses = new ArrayList<>(6);
     private int mainCourseCount = 0;
@@ -34,9 +30,7 @@ public class AddPanel extends javax.swing.JPanel {
     public AddPanel() {
         initComponents();
         panelVisiblity(true, false, false, false);
-        if (checkSaveFile()){
-            loadStudentData();
-        }
+        dataLoader.loadStudentData();
     }
 
     /**
@@ -1270,61 +1264,17 @@ public class AddPanel extends javax.swing.JPanel {
     
     private void createStudentProfile() {
         if(addStudentInputERRPRN() && addCourseData()) {
-            addStudent();
-            saveStudentData();
+            this.dataLoader.addStudent(this.student);
+            this.dataLoader.saveStudentData();
             refreshData();
         }
     }
-
-    //These methods are for adding, dropping students and saving data
-    private void addStudent() {
-        this.students.add(this.student);
-    }
-
+    
     private void refreshData() {
         this.students = new ArrayList();
         this.student = new Student();
         this.courses = new ArrayList<>(6);
         this.mainCourseCount = 0;
-    }
-    
-    private void dropStudent(int index) {
-        this.students.remove(index);
-    }
-    
-    private void saveStudentData() {
-        try {
-            FileOutputStream fos = new FileOutputStream("student.dat");
-            ObjectOutputStream oos = new ObjectOutputStream(fos);   
-            oos.writeObject(this.students); // write students to ObjectOutputStream
-            oos.close(); 
-        } catch(Exception ex) {
-            ex.printStackTrace();
-        }
-    }
-    
-    private void loadStudentData() {
-        try {
-            FileInputStream fis = new FileInputStream("student.dat");
-            ObjectInputStream ois = new ObjectInputStream(fis); 
-            this.students = (ArrayList<Student>) ois.readObject(); // write students from ObjectInputStream to this.students
-            ois.close();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-    }
-    
-    private boolean checkSaveFile() {
-        Path path = Paths.get("student.dat");
-
-        if (Files.exists(path)) {
-            System.out.println("Exists");
-            return true;
-        } else if (Files.notExists(path)) {
-            return false;
-        } else {
-            return false;
-        }
     }
     
     //These methods are for displaying the Drop Student Panel  
@@ -1348,6 +1298,8 @@ public class AddPanel extends javax.swing.JPanel {
         this.dropStudentPanel.setVisible(dropStudentPanel);
         this.resultPanel.setVisible(viewResultPanel);
     }
+    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField addFathersNameField;
