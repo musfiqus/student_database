@@ -20,6 +20,24 @@ import java.util.ArrayList;
  */
 public class DataHandler {
         private ArrayList<Student> students = new ArrayList();
+        private Student currentStudent = new Student();
+        private int currentStudentIndex;
+
+    public int getCurrentStudentIndex() {
+        return currentStudentIndex;
+    }
+
+    public void setCurrentStudentIndex(int currentStudentIndex) {
+        this.currentStudentIndex = currentStudentIndex;
+    }
+
+    public Student getCurrentStudent() {
+        return currentStudent;
+    }
+
+    public void setCurrentStudent(Student currentStudent) {
+        this.currentStudent = currentStudent;
+    }
 
     public DataHandler() {
         loadStudentData();
