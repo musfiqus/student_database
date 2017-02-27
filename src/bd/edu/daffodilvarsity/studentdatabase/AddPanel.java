@@ -103,7 +103,7 @@ public class AddPanel extends javax.swing.JPanel {
         cse212CheckBox = new javax.swing.JCheckBox();
         cse311CheckBox = new javax.swing.JCheckBox();
         cse312CheckBox = new javax.swing.JCheckBox();
-        dropStudentPanel = new javax.swing.JPanel();
+        updateStudentPanel = new javax.swing.JPanel();
         dropSearchStudentPanel = new javax.swing.JPanel();
         findStudentDropField = new javax.swing.JTextField();
         mainFromDrop1 = new javax.swing.JPanel();
@@ -113,14 +113,51 @@ public class AddPanel extends javax.swing.JPanel {
         dropStudentSearchButtonLabel1 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        findStudentErrorTextDrop = new javax.swing.JLabel();
+        updateFindStudentErrorText = new javax.swing.JLabel();
         dropFoundStudentPanel = new javax.swing.JPanel();
-        mainFromDrop2 = new javax.swing.JPanel();
+        cancelFromUpdate = new javax.swing.JPanel();
         jLabel47 = new javax.swing.JLabel();
         jSeparator15 = new javax.swing.JSeparator();
         dropStudentSearchButton2 = new javax.swing.JPanel();
         dropStudentSearchButtonLabel2 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        nameLabel5 = new javax.swing.JLabel();
+        nameLabel6 = new javax.swing.JLabel();
+        nameLabel7 = new javax.swing.JLabel();
+        nameLabel8 = new javax.swing.JLabel();
+        nameLabel9 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        courseBName = new javax.swing.JLabel();
+        nameLabel11 = new javax.swing.JLabel();
+        jSeparator26 = new javax.swing.JSeparator();
+        updateID = new javax.swing.JTextField();
+        updateFullName = new javax.swing.JTextField();
+        updateMothersName = new javax.swing.JTextField();
+        updateFathersName = new javax.swing.JTextField();
+        updateGender = new javax.swing.JTextField();
+        nameLabel12 = new javax.swing.JLabel();
+        courseAName = new javax.swing.JLabel();
+        courseDName = new javax.swing.JLabel();
+        courseCName = new javax.swing.JLabel();
+        courseFName = new javax.swing.JLabel();
+        courseEName = new javax.swing.JLabel();
+        courseDNameGrade = new javax.swing.JLabel();
+        courseANameGrade = new javax.swing.JLabel();
+        courseBNameGrade = new javax.swing.JLabel();
+        courseCNameGrade = new javax.swing.JLabel();
+        courseFNameGrade = new javax.swing.JLabel();
+        courseENameGrade = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        courseBGrade = new javax.swing.JTextField();
+        courseAGrade = new javax.swing.JTextField();
+        courseDGrade = new javax.swing.JTextField();
+        courseCGrade = new javax.swing.JTextField();
+        courseFGrade = new javax.swing.JTextField();
+        courseEGrade = new javax.swing.JTextField();
+        dropStudentSearchButton3 = new javax.swing.JPanel();
+        dropStudentSearchButtonLabel3 = new javax.swing.JLabel();
         resultPanel = new javax.swing.JPanel();
         resultSearchPanel = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
@@ -129,13 +166,53 @@ public class AddPanel extends javax.swing.JPanel {
         mainFromResult1 = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
         jSeparator7 = new javax.swing.JSeparator();
-        resultSearchField1 = new javax.swing.JTextField();
+        resultSearchField = new javax.swing.JTextField();
         jSeparator10 = new javax.swing.JSeparator();
+        resultFindStudentErrorText = new javax.swing.JLabel();
         resultViewPanel = new javax.swing.JPanel();
-        mainFromResult4 = new javax.swing.JPanel();
-        jLabel49 = new javax.swing.JLabel();
-        jSeparator8 = new javax.swing.JSeparator();
-        jLabel18 = new javax.swing.JLabel();
+        cancelFromUpdate1 = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
+        jSeparator16 = new javax.swing.JSeparator();
+        jLabel22 = new javax.swing.JLabel();
+        nameLabel10 = new javax.swing.JLabel();
+        nameLabel13 = new javax.swing.JLabel();
+        nameLabel14 = new javax.swing.JLabel();
+        nameLabel15 = new javax.swing.JLabel();
+        nameLabel16 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        resultCourseBName = new javax.swing.JLabel();
+        nameLabel17 = new javax.swing.JLabel();
+        jSeparator27 = new javax.swing.JSeparator();
+        resultUpdateID = new javax.swing.JTextField();
+        resultFullName = new javax.swing.JTextField();
+        resultMothersName = new javax.swing.JTextField();
+        resultFathersName = new javax.swing.JTextField();
+        resultGender = new javax.swing.JTextField();
+        nameLabel18 = new javax.swing.JLabel();
+        resultCourseAName = new javax.swing.JLabel();
+        resultCourseDName = new javax.swing.JLabel();
+        resultCourseCName = new javax.swing.JLabel();
+        resultCourseFName = new javax.swing.JLabel();
+        resultCourseEName = new javax.swing.JLabel();
+        resultCourseDNameGrade = new javax.swing.JLabel();
+        resultCourseANameGrade = new javax.swing.JLabel();
+        resultCourseBNameGrade = new javax.swing.JLabel();
+        resultCourseCNameGrade = new javax.swing.JLabel();
+        resultCourseFNameGrade = new javax.swing.JLabel();
+        resultCourseENameGrade = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        resultCourseBGrade = new javax.swing.JTextField();
+        courseAGrade1 = new javax.swing.JTextField();
+        resultCourseDGrade = new javax.swing.JTextField();
+        resultCourseCGrade = new javax.swing.JTextField();
+        resultCourseFGrade = new javax.swing.JTextField();
+        resultCourseEGrade = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        resultCourseAGrade = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        courseAGrade2 = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(36, 47, 65));
         setForeground(new java.awt.Color(204, 204, 204));
@@ -232,6 +309,7 @@ public class AddPanel extends javax.swing.JPanel {
         findStudentField.setForeground(new java.awt.Color(255, 255, 255));
         findStudentField.setText("Enter ID to find");
         findStudentField.setBorder(null);
+        findStudentField.setCaretColor(new java.awt.Color(255, 255, 255));
         findStudentField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 findStudentFieldMouseClicked(evt);
@@ -260,6 +338,7 @@ public class AddPanel extends javax.swing.JPanel {
         jLabel11.setText("STUDENT DETAILS");
         addStudentPanel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
+        jSeparator21.setForeground(new java.awt.Color(255, 255, 255));
         jSeparator21.setOrientation(javax.swing.SwingConstants.VERTICAL);
         addStudentPanel.add(jSeparator21, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 20, 390));
 
@@ -278,12 +357,15 @@ public class AddPanel extends javax.swing.JPanel {
         addStudentFullName.setForeground(new java.awt.Color(204, 204, 204));
         addStudentFullName.setText("Enter name");
         addStudentFullName.setBorder(null);
+        addStudentFullName.setCaretColor(new java.awt.Color(255, 255, 255));
         addStudentFullName.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addStudentFullNameMouseClicked(evt);
             }
         });
         addStudentPanel.add(addStudentFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 200, 40));
+
+        jSeparator22.setForeground(new java.awt.Color(255, 255, 255));
         addStudentPanel.add(jSeparator22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 200, -1));
 
         idLabel4.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
@@ -296,12 +378,15 @@ public class AddPanel extends javax.swing.JPanel {
         addStudentID.setForeground(new java.awt.Color(204, 204, 204));
         addStudentID.setText("Enter student ID");
         addStudentID.setBorder(null);
+        addStudentID.setCaretColor(new java.awt.Color(255, 255, 255));
         addStudentID.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addStudentIDMouseClicked(evt);
             }
         });
         addStudentPanel.add(addStudentID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 200, 40));
+
+        jSeparator23.setForeground(new java.awt.Color(255, 255, 255));
         addStudentPanel.add(jSeparator23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 200, -1));
 
         addFathersNameField.setBackground(new java.awt.Color(36, 47, 65));
@@ -309,6 +394,7 @@ public class AddPanel extends javax.swing.JPanel {
         addFathersNameField.setForeground(new java.awt.Color(204, 204, 204));
         addFathersNameField.setText("Enter name");
         addFathersNameField.setBorder(null);
+        addFathersNameField.setCaretColor(new java.awt.Color(255, 255, 255));
         addFathersNameField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addFathersNameFieldMouseClicked(evt);
@@ -320,12 +406,16 @@ public class AddPanel extends javax.swing.JPanel {
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("SELECTED COURSES:");
         addStudentPanel.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, -1, -1));
+
+        jSeparator24.setForeground(new java.awt.Color(255, 255, 255));
         addStudentPanel.add(jSeparator24, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 200, -1));
 
         genderLabel4.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         genderLabel4.setForeground(new java.awt.Color(255, 255, 255));
         genderLabel4.setText("GENDER");
         addStudentPanel.add(genderLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
+
+        jSeparator25.setForeground(new java.awt.Color(255, 255, 255));
         addStudentPanel.add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 200, -1));
 
         motherLabel4.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
@@ -371,6 +461,7 @@ public class AddPanel extends javax.swing.JPanel {
         addMothersNameField.setForeground(new java.awt.Color(204, 204, 204));
         addMothersNameField.setText("Enter name");
         addMothersNameField.setBorder(null);
+        addMothersNameField.setCaretColor(new java.awt.Color(255, 255, 255));
         addMothersNameField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addMothersNameFieldMouseClicked(evt);
@@ -582,9 +673,9 @@ public class AddPanel extends javax.swing.JPanel {
 
         add(addStudentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        dropStudentPanel.setBackground(new java.awt.Color(36, 47, 65));
-        dropStudentPanel.setForeground(new java.awt.Color(204, 204, 204));
-        dropStudentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        updateStudentPanel.setBackground(new java.awt.Color(36, 47, 65));
+        updateStudentPanel.setForeground(new java.awt.Color(204, 204, 204));
+        updateStudentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         dropSearchStudentPanel.setBackground(new java.awt.Color(36, 47, 65));
         dropSearchStudentPanel.setForeground(new java.awt.Color(204, 204, 204));
@@ -595,6 +686,7 @@ public class AddPanel extends javax.swing.JPanel {
         findStudentDropField.setForeground(new java.awt.Color(204, 204, 204));
         findStudentDropField.setText("Enter Student ID");
         findStudentDropField.setBorder(null);
+        findStudentDropField.setCaretColor(new java.awt.Color(255, 255, 255));
         findStudentDropField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 findStudentDropFieldMouseClicked(evt);
@@ -649,53 +741,335 @@ public class AddPanel extends javax.swing.JPanel {
         jSeparator2.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
         dropSearchStudentPanel.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 350, 10));
 
-        findStudentErrorTextDrop.setBackground(new java.awt.Color(255, 0, 153));
-        findStudentErrorTextDrop.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        findStudentErrorTextDrop.setForeground(new java.awt.Color(255, 0, 51));
-        dropSearchStudentPanel.add(findStudentErrorTextDrop, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 450, 40));
+        updateFindStudentErrorText.setBackground(new java.awt.Color(255, 0, 153));
+        updateFindStudentErrorText.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        updateFindStudentErrorText.setForeground(new java.awt.Color(255, 0, 51));
+        dropSearchStudentPanel.add(updateFindStudentErrorText, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 450, 40));
 
-        dropStudentPanel.add(dropSearchStudentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        updateStudentPanel.add(dropSearchStudentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         dropFoundStudentPanel.setBackground(new java.awt.Color(36, 47, 65));
         dropFoundStudentPanel.setForeground(new java.awt.Color(204, 204, 204));
         dropFoundStudentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        mainFromDrop2.setBackground(new java.awt.Color(36, 47, 65));
-        mainFromDrop2.setForeground(new java.awt.Color(255, 255, 255));
-        mainFromDrop2.addMouseListener(new java.awt.event.MouseAdapter() {
+        cancelFromUpdate.setBackground(new java.awt.Color(36, 47, 65));
+        cancelFromUpdate.setForeground(new java.awt.Color(255, 255, 255));
+        cancelFromUpdate.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                mainFromDrop2MouseClicked(evt);
+                cancelFromUpdateMouseClicked(evt);
             }
         });
-        mainFromDrop2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        cancelFromUpdate.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel47.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel47.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel47.setText("BACK TO MAIN MENU");
-        mainFromDrop2.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 50));
-        mainFromDrop2.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 150, 20));
+        jLabel47.setText("CANCEL");
+        cancelFromUpdate.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 50, 50));
 
-        dropFoundStudentPanel.add(mainFromDrop2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 170, 50));
+        jSeparator15.setForeground(new java.awt.Color(255, 255, 255));
+        cancelFromUpdate.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 70, 20));
 
-        dropStudentSearchButton2.setBackground(new java.awt.Color(50, 132, 255));
+        dropFoundStudentPanel.add(cancelFromUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 500, 90, 50));
+
+        dropStudentSearchButton2.setBackground(new java.awt.Color(255, 0, 51));
         dropStudentSearchButton2.setForeground(new java.awt.Color(255, 255, 255));
+        dropStudentSearchButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dropStudentSearchButton2MouseClicked(evt);
+            }
+        });
         dropStudentSearchButton2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         dropStudentSearchButtonLabel2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         dropStudentSearchButtonLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        dropStudentSearchButtonLabel2.setText("PROCEED");
-        dropStudentSearchButton2.add(dropStudentSearchButtonLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 80, 40));
+        dropStudentSearchButtonLabel2.setText("DROP");
+        dropStudentSearchButton2.add(dropStudentSearchButtonLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 80, 40));
 
-        dropFoundStudentPanel.add(dropStudentSearchButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 120, 40));
+        dropFoundStudentPanel.add(dropStudentSearchButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 500, 110, 40));
 
         jLabel17.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setText("DROP STUDENT");
-        dropFoundStudentPanel.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 190, 40));
+        jLabel17.setText("UPDATE STUDENT DATA");
+        dropFoundStudentPanel.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 310, 40));
 
-        dropStudentPanel.add(dropFoundStudentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        nameLabel5.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        nameLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel5.setText("GENDER");
+        dropFoundStudentPanel.add(nameLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 120, 30));
 
-        add(dropStudentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        nameLabel6.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        nameLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel6.setText("NAME");
+        dropFoundStudentPanel.add(nameLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 50, 30));
+
+        nameLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        nameLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel7.setText("ID");
+        dropFoundStudentPanel.add(nameLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 110, 30));
+
+        nameLabel8.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        nameLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel8.setText("FATHER'S NAME");
+        dropFoundStudentPanel.add(nameLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 110, 30));
+
+        nameLabel9.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        nameLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel9.setText("MOTHER'S NAME");
+        dropFoundStudentPanel.add(nameLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 120, 30));
+
+        jLabel14.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("GRADE");
+        dropFoundStudentPanel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 80, 80, -1));
+
+        jLabel19.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("SELECTED COURSES");
+        dropFoundStudentPanel.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 170, -1));
+
+        courseBName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        courseBName.setForeground(new java.awt.Color(0, 255, 204));
+        courseBName.setText("CSE XXX");
+        dropFoundStudentPanel.add(courseBName, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 70, 30));
+
+        nameLabel11.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        nameLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel11.setText("LAB");
+        dropFoundStudentPanel.add(nameLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 60, 30));
+
+        jSeparator26.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator26.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        dropFoundStudentPanel.add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 20, 390));
+
+        updateID.setEditable(false);
+        updateID.setBackground(new java.awt.Color(36, 47, 65));
+        updateID.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        updateID.setForeground(new java.awt.Color(0, 204, 255));
+        updateID.setText("DUMMY TEXT");
+        updateID.setBorder(null);
+        updateID.setCaretColor(new java.awt.Color(255, 255, 255));
+        updateID.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                updateIDMouseClicked(evt);
+            }
+        });
+        dropFoundStudentPanel.add(updateID, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 240, 30));
+
+        updateFullName.setBackground(new java.awt.Color(36, 47, 65));
+        updateFullName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        updateFullName.setForeground(new java.awt.Color(0, 204, 255));
+        updateFullName.setText("DUMMY TEXT");
+        updateFullName.setBorder(null);
+        updateFullName.setCaretColor(new java.awt.Color(255, 255, 255));
+        updateFullName.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                updateFullNameMouseClicked(evt);
+            }
+        });
+        dropFoundStudentPanel.add(updateFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 240, 30));
+
+        updateMothersName.setBackground(new java.awt.Color(36, 47, 65));
+        updateMothersName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        updateMothersName.setForeground(new java.awt.Color(0, 204, 255));
+        updateMothersName.setText("DUMMY TEXT");
+        updateMothersName.setBorder(null);
+        updateMothersName.setCaretColor(new java.awt.Color(255, 255, 255));
+        updateMothersName.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                updateMothersNameMouseClicked(evt);
+            }
+        });
+        dropFoundStudentPanel.add(updateMothersName, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 240, 30));
+
+        updateFathersName.setBackground(new java.awt.Color(36, 47, 65));
+        updateFathersName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        updateFathersName.setForeground(new java.awt.Color(0, 204, 255));
+        updateFathersName.setText("DUMMY TEXT");
+        updateFathersName.setBorder(null);
+        updateFathersName.setCaretColor(new java.awt.Color(255, 255, 255));
+        updateFathersName.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                updateFathersNameMouseClicked(evt);
+            }
+        });
+        dropFoundStudentPanel.add(updateFathersName, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 240, 30));
+
+        updateGender.setEditable(false);
+        updateGender.setBackground(new java.awt.Color(36, 47, 65));
+        updateGender.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        updateGender.setForeground(new java.awt.Color(0, 204, 255));
+        updateGender.setText("DUMMY TEXT");
+        updateGender.setBorder(null);
+        updateGender.setCaretColor(new java.awt.Color(255, 255, 255));
+        updateGender.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                updateGenderMouseClicked(evt);
+            }
+        });
+        dropFoundStudentPanel.add(updateGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 240, 30));
+
+        nameLabel12.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        nameLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel12.setText("MAIN");
+        dropFoundStudentPanel.add(nameLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 50, 30));
+
+        courseAName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        courseAName.setForeground(new java.awt.Color(0, 255, 204));
+        courseAName.setText("CSE XXX");
+        dropFoundStudentPanel.add(courseAName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, 70, 30));
+
+        courseDName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        courseDName.setForeground(new java.awt.Color(0, 255, 204));
+        courseDName.setText("CSE XXX");
+        dropFoundStudentPanel.add(courseDName, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, 70, 30));
+
+        courseCName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        courseCName.setForeground(new java.awt.Color(0, 255, 204));
+        courseCName.setText("CSE XXX");
+        dropFoundStudentPanel.add(courseCName, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 70, 30));
+
+        courseFName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        courseFName.setForeground(new java.awt.Color(0, 255, 204));
+        courseFName.setText("CSE XXX");
+        dropFoundStudentPanel.add(courseFName, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 430, 70, 30));
+
+        courseEName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        courseEName.setForeground(new java.awt.Color(0, 255, 204));
+        courseEName.setText("CSE XXX");
+        dropFoundStudentPanel.add(courseEName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 430, 70, 30));
+
+        courseDNameGrade.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        courseDNameGrade.setForeground(new java.awt.Color(255, 255, 255));
+        courseDNameGrade.setText("CSE XXX");
+        dropFoundStudentPanel.add(courseDNameGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, 110, 30));
+
+        courseANameGrade.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        courseANameGrade.setForeground(new java.awt.Color(255, 255, 255));
+        courseANameGrade.setText("CSE XXX");
+        dropFoundStudentPanel.add(courseANameGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, 110, 30));
+
+        courseBNameGrade.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        courseBNameGrade.setForeground(new java.awt.Color(255, 255, 255));
+        courseBNameGrade.setText("CSE XXX");
+        dropFoundStudentPanel.add(courseBNameGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 170, 110, 30));
+
+        courseCNameGrade.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        courseCNameGrade.setForeground(new java.awt.Color(255, 255, 255));
+        courseCNameGrade.setText("CSE XXX");
+        dropFoundStudentPanel.add(courseCNameGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, 110, 30));
+
+        courseFNameGrade.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        courseFNameGrade.setForeground(new java.awt.Color(255, 255, 255));
+        courseFNameGrade.setText("CSE XXX");
+        dropFoundStudentPanel.add(courseFNameGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 330, 110, 30));
+
+        courseENameGrade.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        courseENameGrade.setForeground(new java.awt.Color(255, 255, 255));
+        courseENameGrade.setText("CSE XXX");
+        dropFoundStudentPanel.add(courseENameGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 290, 110, 30));
+
+        jLabel20.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("STUDENT BIO");
+        dropFoundStudentPanel.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 170, -1));
+
+        jLabel21.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("COURSE");
+        dropFoundStudentPanel.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, 80, -1));
+
+        courseBGrade.setBackground(new java.awt.Color(36, 47, 65));
+        courseBGrade.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        courseBGrade.setForeground(new java.awt.Color(0, 204, 255));
+        courseBGrade.setText("DUMMY TEXT");
+        courseBGrade.setBorder(null);
+        courseBGrade.setCaretColor(new java.awt.Color(255, 255, 255));
+        courseBGrade.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                courseBGradeMouseClicked(evt);
+            }
+        });
+        dropFoundStudentPanel.add(courseBGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 170, 90, 30));
+
+        courseAGrade.setBackground(new java.awt.Color(36, 47, 65));
+        courseAGrade.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        courseAGrade.setForeground(new java.awt.Color(0, 204, 255));
+        courseAGrade.setText("DUMMY TEXT");
+        courseAGrade.setBorder(null);
+        courseAGrade.setCaretColor(new java.awt.Color(255, 255, 255));
+        courseAGrade.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                courseAGradeMouseClicked(evt);
+            }
+        });
+        dropFoundStudentPanel.add(courseAGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 130, 90, 30));
+
+        courseDGrade.setBackground(new java.awt.Color(36, 47, 65));
+        courseDGrade.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        courseDGrade.setForeground(new java.awt.Color(0, 204, 255));
+        courseDGrade.setText("DUMMY TEXT");
+        courseDGrade.setBorder(null);
+        courseDGrade.setCaretColor(new java.awt.Color(255, 255, 255));
+        courseDGrade.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                courseDGradeMouseClicked(evt);
+            }
+        });
+        dropFoundStudentPanel.add(courseDGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 250, 90, 30));
+
+        courseCGrade.setBackground(new java.awt.Color(36, 47, 65));
+        courseCGrade.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        courseCGrade.setForeground(new java.awt.Color(0, 204, 255));
+        courseCGrade.setText("DUMMY TEXT");
+        courseCGrade.setBorder(null);
+        courseCGrade.setCaretColor(new java.awt.Color(255, 255, 255));
+        courseCGrade.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                courseCGradeMouseClicked(evt);
+            }
+        });
+        dropFoundStudentPanel.add(courseCGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 210, 90, 30));
+
+        courseFGrade.setBackground(new java.awt.Color(36, 47, 65));
+        courseFGrade.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        courseFGrade.setForeground(new java.awt.Color(0, 204, 255));
+        courseFGrade.setText("DUMMY TEXT");
+        courseFGrade.setBorder(null);
+        courseFGrade.setCaretColor(new java.awt.Color(255, 255, 255));
+        courseFGrade.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                courseFGradeMouseClicked(evt);
+            }
+        });
+        dropFoundStudentPanel.add(courseFGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 330, 90, 30));
+
+        courseEGrade.setBackground(new java.awt.Color(36, 47, 65));
+        courseEGrade.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        courseEGrade.setForeground(new java.awt.Color(0, 204, 255));
+        courseEGrade.setText("DUMMY TEXT");
+        courseEGrade.setBorder(null);
+        courseEGrade.setCaretColor(new java.awt.Color(255, 255, 255));
+        courseEGrade.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                courseEGradeMouseClicked(evt);
+            }
+        });
+        dropFoundStudentPanel.add(courseEGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 290, 90, 30));
+
+        dropStudentSearchButton3.setBackground(new java.awt.Color(50, 132, 255));
+        dropStudentSearchButton3.setForeground(new java.awt.Color(255, 255, 255));
+        dropStudentSearchButton3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        dropStudentSearchButtonLabel3.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        dropStudentSearchButtonLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        dropStudentSearchButtonLabel3.setText("UPDATE");
+        dropStudentSearchButton3.add(dropStudentSearchButtonLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 80, 40));
+
+        dropFoundStudentPanel.add(dropStudentSearchButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 500, 110, 40));
+
+        updateStudentPanel.add(dropFoundStudentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        add(updateStudentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         resultPanel.setBackground(new java.awt.Color(36, 47, 65));
         resultPanel.setForeground(new java.awt.Color(204, 204, 204));
@@ -712,6 +1086,11 @@ public class AddPanel extends javax.swing.JPanel {
 
         resultSearchButton1.setBackground(new java.awt.Color(50, 132, 255));
         resultSearchButton1.setForeground(new java.awt.Color(255, 255, 255));
+        resultSearchButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                resultSearchButton1MouseClicked(evt);
+            }
+        });
         resultSearchButton1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel36.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -734,27 +1113,37 @@ public class AddPanel extends javax.swing.JPanel {
         jLabel42.setForeground(new java.awt.Color(255, 255, 255));
         jLabel42.setText("BACK TO MAIN MENU");
         mainFromResult1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 50));
+
+        jSeparator7.setForeground(new java.awt.Color(255, 255, 255));
         mainFromResult1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 150, 20));
 
-        resultSearchPanel.add(mainFromResult1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 170, 50));
+        resultSearchPanel.add(mainFromResult1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 170, 50));
 
-        resultSearchField1.setBackground(new java.awt.Color(36, 47, 65));
-        resultSearchField1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        resultSearchField1.setForeground(new java.awt.Color(204, 204, 204));
-        resultSearchField1.setText("Enter Student ID");
-        resultSearchField1.setBorder(null);
-        resultSearchField1.addMouseListener(new java.awt.event.MouseAdapter() {
+        resultSearchField.setBackground(new java.awt.Color(36, 47, 65));
+        resultSearchField.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultSearchField.setForeground(new java.awt.Color(204, 204, 204));
+        resultSearchField.setText("Enter Student ID");
+        resultSearchField.setBorder(null);
+        resultSearchField.setCaretColor(new java.awt.Color(255, 255, 255));
+        resultSearchField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                resultSearchField1MouseClicked(evt);
+                resultSearchFieldMouseClicked(evt);
             }
         });
-        resultSearchField1.addActionListener(new java.awt.event.ActionListener() {
+        resultSearchField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resultSearchField1ActionPerformed(evt);
+                resultSearchFieldActionPerformed(evt);
             }
         });
-        resultSearchPanel.add(resultSearchField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 330, 40));
-        resultSearchPanel.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 330, 30));
+        resultSearchPanel.add(resultSearchField, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 330, 40));
+
+        jSeparator10.setForeground(new java.awt.Color(255, 255, 255));
+        resultSearchPanel.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 330, 10));
+
+        resultFindStudentErrorText.setBackground(new java.awt.Color(255, 0, 153));
+        resultFindStudentErrorText.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        resultFindStudentErrorText.setForeground(new java.awt.Color(255, 0, 51));
+        resultSearchPanel.add(resultFindStudentErrorText, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 450, 40));
 
         resultPanel.add(resultSearchPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -762,27 +1151,275 @@ public class AddPanel extends javax.swing.JPanel {
         resultViewPanel.setForeground(new java.awt.Color(204, 204, 204));
         resultViewPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        mainFromResult4.setBackground(new java.awt.Color(36, 47, 65));
-        mainFromResult4.setForeground(new java.awt.Color(255, 255, 255));
-        mainFromResult4.addMouseListener(new java.awt.event.MouseAdapter() {
+        cancelFromUpdate1.setBackground(new java.awt.Color(36, 47, 65));
+        cancelFromUpdate1.setForeground(new java.awt.Color(255, 255, 255));
+        cancelFromUpdate1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                mainFromResult4MouseClicked(evt);
+                cancelFromUpdate1MouseClicked(evt);
             }
         });
-        mainFromResult4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        cancelFromUpdate1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel49.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel49.setText("BACK TO MAIN MENU");
-        mainFromResult4.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 50));
-        mainFromResult4.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 150, 20));
+        jLabel48.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel48.setText("BACK");
+        cancelFromUpdate1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 50, 50));
 
-        resultViewPanel.add(mainFromResult4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 170, 50));
+        jSeparator16.setForeground(new java.awt.Color(255, 255, 255));
+        cancelFromUpdate1.add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 50, 20));
 
-        jLabel18.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel18.setText("Result");
-        resultViewPanel.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 190, 40));
+        resultViewPanel.add(cancelFromUpdate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 500, 90, 50));
+
+        jLabel22.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("RESULT");
+        resultViewPanel.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 240, 40));
+
+        nameLabel10.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        nameLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel10.setText("GENDER");
+        resultViewPanel.add(nameLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 120, 30));
+
+        nameLabel13.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        nameLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel13.setText("NAME");
+        resultViewPanel.add(nameLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 50, 30));
+
+        nameLabel14.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        nameLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel14.setText("ID");
+        resultViewPanel.add(nameLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 110, 30));
+
+        nameLabel15.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        nameLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel15.setText("FATHER'S NAME");
+        resultViewPanel.add(nameLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 110, 30));
+
+        nameLabel16.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        nameLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel16.setText("MOTHER'S NAME");
+        resultViewPanel.add(nameLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 120, 30));
+
+        jLabel27.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel27.setText("GRADE");
+        resultViewPanel.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 80, 80, -1));
+
+        jLabel28.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel28.setText("SELECTED COURSES");
+        resultViewPanel.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 170, -1));
+
+        resultCourseBName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultCourseBName.setForeground(new java.awt.Color(0, 204, 255));
+        resultCourseBName.setText("CSE XXX");
+        resultViewPanel.add(resultCourseBName, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 70, 30));
+
+        nameLabel17.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        nameLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel17.setText("LAB");
+        resultViewPanel.add(nameLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 60, 30));
+
+        jSeparator27.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator27.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        resultViewPanel.add(jSeparator27, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 20, 390));
+
+        resultUpdateID.setEditable(false);
+        resultUpdateID.setBackground(new java.awt.Color(36, 47, 65));
+        resultUpdateID.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultUpdateID.setForeground(new java.awt.Color(0, 204, 255));
+        resultUpdateID.setText("DUMMY TEXT");
+        resultUpdateID.setBorder(null);
+        resultUpdateID.setCaretColor(new java.awt.Color(255, 255, 255));
+        resultViewPanel.add(resultUpdateID, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 240, 30));
+
+        resultFullName.setEditable(false);
+        resultFullName.setBackground(new java.awt.Color(36, 47, 65));
+        resultFullName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultFullName.setForeground(new java.awt.Color(0, 204, 255));
+        resultFullName.setText("DUMMY TEXT");
+        resultFullName.setBorder(null);
+        resultFullName.setCaretColor(new java.awt.Color(255, 255, 255));
+        resultViewPanel.add(resultFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 240, 30));
+
+        resultMothersName.setEditable(false);
+        resultMothersName.setBackground(new java.awt.Color(36, 47, 65));
+        resultMothersName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultMothersName.setForeground(new java.awt.Color(0, 204, 255));
+        resultMothersName.setText("DUMMY TEXT");
+        resultMothersName.setBorder(null);
+        resultMothersName.setCaretColor(new java.awt.Color(255, 255, 255));
+        resultViewPanel.add(resultMothersName, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 240, 30));
+
+        resultFathersName.setEditable(false);
+        resultFathersName.setBackground(new java.awt.Color(36, 47, 65));
+        resultFathersName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultFathersName.setForeground(new java.awt.Color(0, 204, 255));
+        resultFathersName.setText("DUMMY TEXT");
+        resultFathersName.setBorder(null);
+        resultFathersName.setCaretColor(new java.awt.Color(255, 255, 255));
+        resultViewPanel.add(resultFathersName, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 240, 30));
+
+        resultGender.setEditable(false);
+        resultGender.setBackground(new java.awt.Color(36, 47, 65));
+        resultGender.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultGender.setForeground(new java.awt.Color(0, 204, 255));
+        resultGender.setText("DUMMY TEXT");
+        resultGender.setBorder(null);
+        resultGender.setCaretColor(new java.awt.Color(255, 255, 255));
+        resultViewPanel.add(resultGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 240, 30));
+
+        nameLabel18.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        nameLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel18.setText("MAIN");
+        resultViewPanel.add(nameLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 50, 30));
+
+        resultCourseAName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultCourseAName.setForeground(new java.awt.Color(0, 204, 255));
+        resultCourseAName.setText("CSE XXX");
+        resultViewPanel.add(resultCourseAName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, 70, 30));
+
+        resultCourseDName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultCourseDName.setForeground(new java.awt.Color(0, 204, 255));
+        resultCourseDName.setText("CSE XXX");
+        resultViewPanel.add(resultCourseDName, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, 70, 30));
+
+        resultCourseCName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultCourseCName.setForeground(new java.awt.Color(0, 204, 255));
+        resultCourseCName.setText("CSE XXX");
+        resultViewPanel.add(resultCourseCName, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 70, 30));
+
+        resultCourseFName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultCourseFName.setForeground(new java.awt.Color(0, 204, 255));
+        resultCourseFName.setText("CSE XXX");
+        resultViewPanel.add(resultCourseFName, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 430, 70, 30));
+
+        resultCourseEName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultCourseEName.setForeground(new java.awt.Color(0, 204, 255));
+        resultCourseEName.setText("CSE XXX");
+        resultViewPanel.add(resultCourseEName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 430, 70, 30));
+
+        resultCourseDNameGrade.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        resultCourseDNameGrade.setForeground(new java.awt.Color(255, 255, 255));
+        resultCourseDNameGrade.setText("CSE XXX");
+        resultViewPanel.add(resultCourseDNameGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, 110, 30));
+
+        resultCourseANameGrade.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        resultCourseANameGrade.setForeground(new java.awt.Color(255, 255, 255));
+        resultCourseANameGrade.setText("CSE XXX");
+        resultViewPanel.add(resultCourseANameGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, 110, 30));
+
+        resultCourseBNameGrade.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        resultCourseBNameGrade.setForeground(new java.awt.Color(255, 255, 255));
+        resultCourseBNameGrade.setText("CSE XXX");
+        resultViewPanel.add(resultCourseBNameGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 170, 110, 30));
+
+        resultCourseCNameGrade.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        resultCourseCNameGrade.setForeground(new java.awt.Color(255, 255, 255));
+        resultCourseCNameGrade.setText("CSE XXX");
+        resultViewPanel.add(resultCourseCNameGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, 110, 30));
+
+        resultCourseFNameGrade.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        resultCourseFNameGrade.setForeground(new java.awt.Color(255, 255, 255));
+        resultCourseFNameGrade.setText("CSE XXX");
+        resultViewPanel.add(resultCourseFNameGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 330, 110, 30));
+
+        resultCourseENameGrade.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        resultCourseENameGrade.setForeground(new java.awt.Color(255, 255, 255));
+        resultCourseENameGrade.setText("CSE XXX");
+        resultViewPanel.add(resultCourseENameGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 290, 110, 30));
+
+        jLabel29.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel29.setText("STUDENT BIO");
+        resultViewPanel.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 170, -1));
+
+        jLabel30.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel30.setText("CGPA");
+        resultViewPanel.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 390, 60, 40));
+
+        resultCourseBGrade.setEditable(false);
+        resultCourseBGrade.setBackground(new java.awt.Color(36, 47, 65));
+        resultCourseBGrade.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultCourseBGrade.setForeground(new java.awt.Color(0, 204, 255));
+        resultCourseBGrade.setText("DUMMY TEXT");
+        resultCourseBGrade.setBorder(null);
+        resultCourseBGrade.setCaretColor(new java.awt.Color(255, 255, 255));
+        resultViewPanel.add(resultCourseBGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 170, 90, 30));
+
+        courseAGrade1.setEditable(false);
+        courseAGrade1.setBackground(new java.awt.Color(36, 47, 65));
+        courseAGrade1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        courseAGrade1.setForeground(new java.awt.Color(0, 204, 255));
+        courseAGrade1.setText("DUMMY TEXT");
+        courseAGrade1.setBorder(null);
+        courseAGrade1.setCaretColor(new java.awt.Color(255, 255, 255));
+        resultViewPanel.add(courseAGrade1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 400, 120, -1));
+
+        resultCourseDGrade.setEditable(false);
+        resultCourseDGrade.setBackground(new java.awt.Color(36, 47, 65));
+        resultCourseDGrade.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultCourseDGrade.setForeground(new java.awt.Color(0, 204, 255));
+        resultCourseDGrade.setText("DUMMY TEXT");
+        resultCourseDGrade.setBorder(null);
+        resultCourseDGrade.setCaretColor(new java.awt.Color(255, 255, 255));
+        resultViewPanel.add(resultCourseDGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 250, 90, 30));
+
+        resultCourseCGrade.setEditable(false);
+        resultCourseCGrade.setBackground(new java.awt.Color(36, 47, 65));
+        resultCourseCGrade.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultCourseCGrade.setForeground(new java.awt.Color(0, 204, 255));
+        resultCourseCGrade.setText("DUMMY TEXT");
+        resultCourseCGrade.setBorder(null);
+        resultCourseCGrade.setCaretColor(new java.awt.Color(255, 255, 255));
+        resultViewPanel.add(resultCourseCGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 210, 90, 30));
+
+        resultCourseFGrade.setEditable(false);
+        resultCourseFGrade.setBackground(new java.awt.Color(36, 47, 65));
+        resultCourseFGrade.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultCourseFGrade.setForeground(new java.awt.Color(0, 204, 255));
+        resultCourseFGrade.setText("DUMMY TEXT");
+        resultCourseFGrade.setBorder(null);
+        resultCourseFGrade.setCaretColor(new java.awt.Color(255, 255, 255));
+        resultViewPanel.add(resultCourseFGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 330, 90, 30));
+
+        resultCourseEGrade.setEditable(false);
+        resultCourseEGrade.setBackground(new java.awt.Color(36, 47, 65));
+        resultCourseEGrade.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultCourseEGrade.setForeground(new java.awt.Color(0, 204, 255));
+        resultCourseEGrade.setText("DUMMY TEXT");
+        resultCourseEGrade.setBorder(null);
+        resultCourseEGrade.setCaretColor(new java.awt.Color(255, 255, 255));
+        resultViewPanel.add(resultCourseEGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 290, 90, 30));
+
+        jLabel31.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel31.setText("COURSE");
+        resultViewPanel.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, 80, -1));
+
+        resultCourseAGrade.setEditable(false);
+        resultCourseAGrade.setBackground(new java.awt.Color(36, 47, 65));
+        resultCourseAGrade.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        resultCourseAGrade.setForeground(new java.awt.Color(0, 204, 255));
+        resultCourseAGrade.setText("DUMMY TEXT");
+        resultCourseAGrade.setBorder(null);
+        resultCourseAGrade.setCaretColor(new java.awt.Color(255, 255, 255));
+        resultViewPanel.add(resultCourseAGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 130, 90, 30));
+
+        jLabel32.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel32.setText("REMARKS");
+        resultViewPanel.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, 80, 40));
+
+        courseAGrade2.setEditable(false);
+        courseAGrade2.setBackground(new java.awt.Color(36, 47, 65));
+        courseAGrade2.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        courseAGrade2.setForeground(new java.awt.Color(0, 204, 255));
+        courseAGrade2.setText("DUMMY TEXT");
+        courseAGrade2.setBorder(null);
+        courseAGrade2.setCaretColor(new java.awt.Color(255, 255, 255));
+        resultViewPanel.add(courseAGrade2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 430, 120, 20));
 
         resultPanel.add(resultViewPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -850,25 +1487,22 @@ public class AddPanel extends javax.swing.JPanel {
         panelVisiblity(true, false, false, false); //DONE
     }//GEN-LAST:event_mainFromDrop1MouseClicked
 
-    private void mainFromDrop2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainFromDrop2MouseClicked
-        panelVisiblity(true, false, false, false); //DONE
-    }//GEN-LAST:event_mainFromDrop2MouseClicked
+    private void cancelFromUpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelFromUpdateMouseClicked
+        displayDropStudentPanel(true, false);
+        this.updateFindStudentErrorText.setText("");//DONE
+    }//GEN-LAST:event_cancelFromUpdateMouseClicked
 
     private void mainFromResult1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainFromResult1MouseClicked
        panelVisiblity(true, false, false, false); //DONE
     }//GEN-LAST:event_mainFromResult1MouseClicked
 
-    private void resultSearchField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_resultSearchField1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_resultSearchField1MouseClicked
+    private void resultSearchFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_resultSearchFieldMouseClicked
+        this.resultSearchField.setText("");
+    }//GEN-LAST:event_resultSearchFieldMouseClicked
 
-    private void resultSearchField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultSearchField1ActionPerformed
+    private void resultSearchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultSearchFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_resultSearchField1ActionPerformed
-
-    private void mainFromResult4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainFromResult4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mainFromResult4MouseClicked
+    }//GEN-LAST:event_resultSearchFieldActionPerformed
 
     private void createProfileButtonPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createProfileButtonPanel4MouseClicked
         createStudentProfile();
@@ -997,16 +1631,84 @@ public class AddPanel extends javax.swing.JPanel {
             int n = searchByID(this.findStudentDropField.getText());
             if(n != -1) {
                 setCurrentStudent(n);
-                this.findStudentErrorTextDrop.setForeground(Color.GREEN);
-                this.findStudentErrorTextDrop.setText(this.findStudentDropField.getText()+" is registered."+" \nPress XXX or XXX for more.");
+                updateStudentShowDetails(this.dataLoader.getCurrentStudent());
+                displayDropStudentPanel(false, true);
             } else {
-                this.findStudentErrorTextDrop.setText(this.findStudentDropField.getText()+" was not found!");
+                this.updateFindStudentErrorText.setText(this.findStudentDropField.getText()+" was not found!");
             }
         } else {
             errorDialogue("Please enter the ID in correct format!\n" +
                                "        Format: 171-15-XXXX", 1);
         }
     }//GEN-LAST:event_dropStudentSearchButton1MouseClicked
+
+    private void updateIDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateIDMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updateIDMouseClicked
+
+    private void updateFullNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateFullNameMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updateFullNameMouseClicked
+
+    private void updateMothersNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateMothersNameMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updateMothersNameMouseClicked
+
+    private void updateFathersNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateFathersNameMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updateFathersNameMouseClicked
+
+    private void updateGenderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateGenderMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updateGenderMouseClicked
+
+    private void courseBGradeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_courseBGradeMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_courseBGradeMouseClicked
+
+    private void courseAGradeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_courseAGradeMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_courseAGradeMouseClicked
+
+    private void courseDGradeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_courseDGradeMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_courseDGradeMouseClicked
+
+    private void courseCGradeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_courseCGradeMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_courseCGradeMouseClicked
+
+    private void courseFGradeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_courseFGradeMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_courseFGradeMouseClicked
+
+    private void courseEGradeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_courseEGradeMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_courseEGradeMouseClicked
+
+    private void dropStudentSearchButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dropStudentSearchButton2MouseClicked
+        errorDialogueTwoButtonDrop("Are you sure you want to drop this student?");
+    }//GEN-LAST:event_dropStudentSearchButton2MouseClicked
+
+    private void cancelFromUpdate1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelFromUpdate1MouseClicked
+        displayResultPanel(true, false);
+    }//GEN-LAST:event_cancelFromUpdate1MouseClicked
+
+    private void resultSearchButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_resultSearchButton1MouseClicked
+        if(checkIdNum(this.resultSearchField.getText())) {
+            int n = searchByID(this.resultSearchField.getText());
+            if(n != -1) {
+                setCurrentStudent(n);
+                resultShowDetails(this.dataLoader.getCurrentStudent());
+                displayResultPanel(false, true);
+            } else {
+                this.resultFindStudentErrorText.setText(this.findStudentDropField.getText()+" was not found!");
+            }
+        } else {
+            errorDialogue("Please enter the ID in correct format!\n" +
+                               "        Format: 171-15-XXXX", 1);
+        }
+    }//GEN-LAST:event_resultSearchButton1MouseClicked
     
     //This function disables the main course checkboxes
     
@@ -1032,9 +1734,7 @@ public class AddPanel extends javax.swing.JPanel {
         }
     }
     
-    
     //Moar data, unverified
-    
     private boolean addStudentInputERRPRN() {
         String fullName = this.addStudentFullName.getText();
         String id = this.addStudentID.getText();
@@ -1101,6 +1801,8 @@ public class AddPanel extends javax.swing.JPanel {
         return !motherName.equals("");
     }
     
+    
+    //Shows context based error dialogue
     private void errorDialogue(String messageString, int whichField) {
         Object[] message = {messageString};
         Object[] options = {"OK"};
@@ -1120,6 +1822,21 @@ public class AddPanel extends javax.swing.JPanel {
             //DO NOTHING JUST DISPLAY MESSAGE
         }
     }
+        private void errorDialogueTwoButtonDrop(String messageString) {
+        Object[] message = {messageString};
+        Object[] options = {"YES", "NO"};
+        int n = JOptionPane.showOptionDialog(new JFrame(),
+                message, "Alert!",
+                JOptionPane.OK_OPTION, JOptionPane.CANCEL_OPTION, null,
+                options, options[1]);
+        if(n == JOptionPane.OK_OPTION){
+            //DROP STUDENT CODE
+        } else if(n == JOptionPane.CANCEL_OPTION){
+            //CANCEL CODE
+        } else {
+            //DO NOTHING JUST DISPLAY MESSAGE
+        }
+    }
     
     private boolean addCourseData() {
         if(this.courses.size()==6) {
@@ -1135,6 +1852,7 @@ public class AddPanel extends javax.swing.JPanel {
         }
     }
     
+    //Creates profile upon button press
     private void createStudentProfile() {
         if(addStudentInputERRPRN() && addCourseData()) {
             this.dataLoader.addStudent(this.student);
@@ -1168,7 +1886,7 @@ public class AddPanel extends javax.swing.JPanel {
     private void panelVisiblity(boolean welcomePanel, boolean addStudentPanel, boolean dropStudentPanel, boolean viewResultPanel){
         this.welcomePanel.setVisible(welcomePanel);
         this.addStudentPanel.setVisible(addStudentPanel);
-        this.dropStudentPanel.setVisible(dropStudentPanel);
+        this.updateStudentPanel.setVisible(dropStudentPanel);
         this.resultPanel.setVisible(viewResultPanel);
     }
 
@@ -1178,7 +1896,7 @@ public class AddPanel extends javax.swing.JPanel {
         this.findStudentErrorText.setText("");
     }
     
-    //Universal search method
+    //Universal ID search method
     private int searchByID(String id) {
         for(Student eachStudent: this.dataLoader.getStudents()) {
             if(eachStudent.getIdNum().equals(id)) {
@@ -1188,9 +1906,72 @@ public class AddPanel extends javax.swing.JPanel {
         return -1;
     }
     
+    //Sets current student for eiditing/updating (if found)
     private void setCurrentStudent(int index) {
         this.dataLoader.setCurrentStudent(this.dataLoader.getStudents().get(index));
         this.dataLoader.setCurrentStudentIndex(index);
+    }
+    
+    private void updateStudentShowDetails(Student currentStudent) {
+        this.updateFullName.setText(currentStudent.getFullName().toUpperCase());
+        this.updateFathersName.setText(currentStudent.getFatherName().toUpperCase());
+        this.updateMothersName.setText(currentStudent.getMotherName().toUpperCase());
+        this.updateID.setText(currentStudent.getIdNum());
+        this.updateGender.setText(currentStudent.getGender().toUpperCase());
+        this.courseAName.setText(currentStudent.getA().getCourseName().toUpperCase());
+        this.courseBName.setText(currentStudent.getB().getCourseName().toUpperCase());
+        this.courseCName.setText(currentStudent.getC().getCourseName().toUpperCase());
+        this.courseDName.setText(currentStudent.getD().getCourseName().toUpperCase());
+        this.courseEName.setText(currentStudent.getE().getCourseName().toUpperCase());
+        this.courseFName.setText(currentStudent.getF().getCourseName().toUpperCase());
+        this.courseANameGrade.setText(currentStudent.getA().getCourseName().toUpperCase());
+        this.courseBNameGrade.setText(currentStudent.getB().getCourseName().toUpperCase());
+        this.courseCNameGrade.setText(currentStudent.getC().getCourseName().toUpperCase());
+        this.courseDNameGrade.setText(currentStudent.getD().getCourseName().toUpperCase());
+        this.courseENameGrade.setText(currentStudent.getE().getCourseName().toUpperCase());
+        this.courseFNameGrade.setText(currentStudent.getF().getCourseName().toUpperCase());
+        this.courseAGrade.setText(""+currentStudent.getA().getGradePoints());
+        this.courseBGrade.setText(""+currentStudent.getB().getGradePoints());
+        this.courseCGrade.setText(""+currentStudent.getC().getGradePoints());
+        this.courseDGrade.setText(""+currentStudent.getD().getGradePoints());
+        this.courseEGrade.setText(""+currentStudent.getE().getGradePoints());
+        this.courseFGrade.setText(""+currentStudent.getF().getGradePoints());
+    }
+    
+    private void resultShowDetails(Student currentStudent) {
+        this.resultFullName.setText(currentStudent.getFullName().toUpperCase());
+        this.resultFathersName.setText(currentStudent.getFatherName().toUpperCase());
+        this.resultMothersName.setText(currentStudent.getMotherName().toUpperCase());
+        this.resultUpdateID.setText(currentStudent.getIdNum());
+        this.resultGender.setText(currentStudent.getGender().toUpperCase());
+        this.resultCourseAName.setText(currentStudent.getA().getCourseName().toUpperCase());
+        this.resultCourseBName.setText(currentStudent.getB().getCourseName().toUpperCase());
+        this.resultCourseCName.setText(currentStudent.getC().getCourseName().toUpperCase());
+        this.resultCourseDName.setText(currentStudent.getD().getCourseName().toUpperCase());
+        this.resultCourseEName.setText(currentStudent.getE().getCourseName().toUpperCase());
+        this.resultCourseFName.setText(currentStudent.getF().getCourseName().toUpperCase());
+        this.resultCourseANameGrade.setText(currentStudent.getA().getCourseName().toUpperCase());
+        this.resultCourseBNameGrade.setText(currentStudent.getB().getCourseName().toUpperCase());
+        this.resultCourseCNameGrade.setText(currentStudent.getC().getCourseName().toUpperCase());
+        this.resultCourseDNameGrade.setText(currentStudent.getD().getCourseName().toUpperCase());
+        this.resultCourseENameGrade.setText(currentStudent.getE().getCourseName().toUpperCase());
+        this.resultCourseFNameGrade.setText(currentStudent.getF().getCourseName().toUpperCase());
+        this.resultCourseAGrade.setText(""+currentStudent.getA().getGradePoints());
+        this.resultCourseBGrade.setText(""+currentStudent.getB().getGradePoints());
+        this.resultCourseCGrade.setText(""+currentStudent.getC().getGradePoints());
+        this.resultCourseDGrade.setText(""+currentStudent.getD().getGradePoints());
+        this.resultCourseEGrade.setText(""+currentStudent.getE().getGradePoints());
+        this.resultCourseFGrade.setText(""+currentStudent.getF().getGradePoints());
+    }
+    
+    //Grade value checker
+    private boolean isDouble(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1202,6 +1983,28 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JTextField addStudentID;
     private javax.swing.JPanel addStudentPanel;
     private javax.swing.JPanel admitStudentButton;
+    private javax.swing.JPanel cancelFromUpdate;
+    private javax.swing.JPanel cancelFromUpdate1;
+    private javax.swing.JTextField courseAGrade;
+    private javax.swing.JTextField courseAGrade1;
+    private javax.swing.JTextField courseAGrade2;
+    private javax.swing.JLabel courseAName;
+    private javax.swing.JLabel courseANameGrade;
+    private javax.swing.JTextField courseBGrade;
+    private javax.swing.JLabel courseBName;
+    private javax.swing.JLabel courseBNameGrade;
+    private javax.swing.JTextField courseCGrade;
+    private javax.swing.JLabel courseCName;
+    private javax.swing.JLabel courseCNameGrade;
+    private javax.swing.JTextField courseDGrade;
+    private javax.swing.JLabel courseDName;
+    private javax.swing.JLabel courseDNameGrade;
+    private javax.swing.JTextField courseEGrade;
+    private javax.swing.JLabel courseEName;
+    private javax.swing.JLabel courseENameGrade;
+    private javax.swing.JTextField courseFGrade;
+    private javax.swing.JLabel courseFName;
+    private javax.swing.JLabel courseFNameGrade;
     private javax.swing.JPanel createProfileButtonPanel4;
     private javax.swing.JCheckBox cse101CheckBox;
     private javax.swing.JCheckBox cse102CheckBox;
@@ -1221,30 +2024,40 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JPanel dropFoundStudentPanel;
     private javax.swing.JPanel dropSearchStudentPanel;
     private javax.swing.JPanel dropStudentButton;
-    private javax.swing.JPanel dropStudentPanel;
     private javax.swing.JPanel dropStudentSearchButton1;
     private javax.swing.JPanel dropStudentSearchButton2;
+    private javax.swing.JPanel dropStudentSearchButton3;
     private javax.swing.JLabel dropStudentSearchButtonLabel1;
     private javax.swing.JLabel dropStudentSearchButtonLabel2;
+    private javax.swing.JLabel dropStudentSearchButtonLabel3;
     private javax.swing.JLabel fatherLabel4;
     private javax.swing.JPanel findButton;
     private javax.swing.JTextField findStudentDropField;
     private javax.swing.JLabel findStudentErrorText;
-    private javax.swing.JLabel findStudentErrorTextDrop;
     private javax.swing.JTextField findStudentField;
     private javax.swing.JLabel genderLabel4;
     private javax.swing.JLabel idLabel4;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel40;
@@ -1253,37 +2066,82 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel48;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator13;
     private javax.swing.JSeparator jSeparator15;
+    private javax.swing.JSeparator jSeparator16;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator21;
     private javax.swing.JSeparator jSeparator22;
     private javax.swing.JSeparator jSeparator23;
     private javax.swing.JSeparator jSeparator24;
     private javax.swing.JSeparator jSeparator25;
+    private javax.swing.JSeparator jSeparator26;
+    private javax.swing.JSeparator jSeparator27;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator7;
-    private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JPanel mainFromAdmit;
     private javax.swing.JPanel mainFromDrop1;
-    private javax.swing.JPanel mainFromDrop2;
     private javax.swing.JPanel mainFromResult1;
-    private javax.swing.JPanel mainFromResult4;
     private javax.swing.JLabel motherLabel4;
+    private javax.swing.JLabel nameLabel10;
+    private javax.swing.JLabel nameLabel11;
+    private javax.swing.JLabel nameLabel12;
+    private javax.swing.JLabel nameLabel13;
+    private javax.swing.JLabel nameLabel14;
+    private javax.swing.JLabel nameLabel15;
+    private javax.swing.JLabel nameLabel16;
+    private javax.swing.JLabel nameLabel17;
+    private javax.swing.JLabel nameLabel18;
     private javax.swing.JLabel nameLabel4;
+    private javax.swing.JLabel nameLabel5;
+    private javax.swing.JLabel nameLabel6;
+    private javax.swing.JLabel nameLabel7;
+    private javax.swing.JLabel nameLabel8;
+    private javax.swing.JLabel nameLabel9;
+    private javax.swing.JTextField resultCourseAGrade;
+    private javax.swing.JLabel resultCourseAName;
+    private javax.swing.JLabel resultCourseANameGrade;
+    private javax.swing.JTextField resultCourseBGrade;
+    private javax.swing.JLabel resultCourseBName;
+    private javax.swing.JLabel resultCourseBNameGrade;
+    private javax.swing.JTextField resultCourseCGrade;
+    private javax.swing.JLabel resultCourseCName;
+    private javax.swing.JLabel resultCourseCNameGrade;
+    private javax.swing.JTextField resultCourseDGrade;
+    private javax.swing.JLabel resultCourseDName;
+    private javax.swing.JLabel resultCourseDNameGrade;
+    private javax.swing.JTextField resultCourseEGrade;
+    private javax.swing.JLabel resultCourseEName;
+    private javax.swing.JLabel resultCourseENameGrade;
+    private javax.swing.JTextField resultCourseFGrade;
+    private javax.swing.JLabel resultCourseFName;
+    private javax.swing.JLabel resultCourseFNameGrade;
+    private javax.swing.JTextField resultFathersName;
+    private javax.swing.JLabel resultFindStudentErrorText;
+    private javax.swing.JTextField resultFullName;
+    private javax.swing.JTextField resultGender;
+    private javax.swing.JTextField resultMothersName;
     private javax.swing.JPanel resultPanel;
     private javax.swing.JPanel resultSearchButton1;
-    private javax.swing.JTextField resultSearchField1;
+    private javax.swing.JTextField resultSearchField;
     private javax.swing.JPanel resultSearchPanel;
+    private javax.swing.JTextField resultUpdateID;
     private javax.swing.JPanel resultViewPanel;
     private javax.swing.JLabel showSelectedCoursesCount;
     private javax.swing.JLabel showSelectedLabCoursesCount;
+    private javax.swing.JTextField updateFathersName;
+    private javax.swing.JLabel updateFindStudentErrorText;
+    private javax.swing.JTextField updateFullName;
+    private javax.swing.JTextField updateGender;
+    private javax.swing.JTextField updateID;
+    private javax.swing.JTextField updateMothersName;
+    private javax.swing.JPanel updateStudentPanel;
     private javax.swing.JPanel viewResultButton;
     private javax.swing.JPanel welcomePanel;
     private javax.swing.JLabel welcomeText;
