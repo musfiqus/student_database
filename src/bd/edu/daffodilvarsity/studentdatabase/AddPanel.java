@@ -696,7 +696,7 @@ public class AddPanel extends javax.swing.JPanel {
         jSeparator13.setForeground(new java.awt.Color(255, 255, 255));
         mainFromDrop1.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 150, 20));
 
-        updateSearchStudentPanel.add(mainFromDrop1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 460, 170, 50));
+        updateSearchStudentPanel.add(mainFromDrop1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 170, 50));
 
         dropStudentSearchButton1.setBackground(new java.awt.Color(50, 132, 255));
         dropStudentSearchButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -1376,8 +1376,14 @@ public class AddPanel extends javax.swing.JPanel {
 
     private void viewResultButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewResultButtonMouseClicked
         //Need to implement dynamic views after setting up search fucntion
-        displayResultPanel(true, false);
-        clearText();
+        if(this.dataLoader.getCurrentStudentIndex() >= 0) {
+            updateStudentShowDetails();
+            displayResultPanel(false, true);
+            clearText();
+        } else {
+            displayResultPanel(true, false);
+        }
+        
     }//GEN-LAST:event_viewResultButtonMouseClicked
 
     private void admitStudentButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admitStudentButtonMouseClicked
@@ -1392,7 +1398,13 @@ public class AddPanel extends javax.swing.JPanel {
 
     private void dropStudentButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dropStudentButtonMouseClicked
         //Need to implement dynamic views after setting up search fucntion
-        displayUpdateStudentPanel(true, false);
+        if(this.dataLoader.getCurrentStudentIndex() >= 0) {
+            updateStudentShowDetails();
+            clearText();
+            displayUpdateStudentPanel(false, true);
+        } else {
+            displayUpdateStudentPanel(true, false);
+        }
     }//GEN-LAST:event_dropStudentButtonMouseClicked
 
     private void findStudentFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_findStudentFieldMouseClicked
@@ -1739,18 +1751,41 @@ public class AddPanel extends javax.swing.JPanel {
     
     private DataHandler dataLoader = new DataHandler();
     private Student student = new Student();
-    private ArrayList<Course> courses = new ArrayList<>(6);
+    private ArrayList<Course> mainCourses = new ArrayList<>();
+    private ArrayList<Course> labCourses = new ArrayList<>();
+    private ArrayList<Course> courses;
     private int mainCourseCount = 0;
+    private int labCourseCount = 0;
    
     //K THEN LET IT RAIN DATA
     
     /** Admit panel methods **/  
+    //Creates a empty course arraylist
+    private void courseInit() {
+        this.courses = new ArrayList<>();
+        for(int i=0; i < 6; i++) {
+            if(i < 4) {
+                this.courses.add(this.mainCourses.get(i));
+            } else {
+                this.courses.add(this.labCourses.get(i-4));
+            }
+        }
+    }
+    
+    //Debug course
+    private void printCourse() {
+        for(Course eachCourse : this.courses) {
+            System.out.println(eachCourse.getCourseName());
+        }
+    }
     
     //GOAL Have to find out a better way to do this without repeating all these codes. DONE (for now)
     private void mainCourseCheckBoxAction(javax.swing.JCheckBox checkBox) {                                               
         if(checkBox.isSelected() && this.mainCourseCount < 4) {
-            this.courses.add(new Course(checkBox.getText(), 0.0));
+            this.mainCourses.add(new Course(checkBox.getText(), 0.0));
             this.mainCourseCount++;
+            //DEBUG
+            System.out.println(""+this.mainCourseCount);
             this.showSelectedCoursesCount.setForeground(Color.RED);
             if(this.mainCourseCount == 4) {
                 this.showSelectedCoursesCount.setForeground(Color.GREEN);
@@ -1759,7 +1794,7 @@ public class AddPanel extends javax.swing.JPanel {
         } else if(this.mainCourseCount >= 4 && checkBox.isSelected()) {
             checkBox.setSelected(false);
         } else {
-            deleteCourse(checkBox.getText());
+            deleteMainCourse(checkBox.getText());
             this.mainCourseCount--;
             this.showSelectedCoursesCount.setForeground(Color.RED);
             this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
@@ -1767,43 +1802,39 @@ public class AddPanel extends javax.swing.JPanel {
     }
     
     private void labCourseCheckBoxAction(javax.swing.JCheckBox checkBox) {                                               
-        if(checkBox.isSelected() && this.mainCourseCount < 6 && this.mainCourseCount >= 4) {
-            this.courses.add(new Course(checkBox.getText(), 0.0));
-            this.mainCourseCount++;
+        if(checkBox.isSelected() && this.labCourseCount < 2) {
+            this.labCourses.add(new Course(checkBox.getText(), 0.0));
+            this.labCourseCount++;
+            //DEBUG
+            System.out.println(""+this.labCourseCount);
             this.showSelectedLabCoursesCount.setForeground(Color.RED);
-            if (this.mainCourseCount == 6) {
+            if (this.labCourseCount == 2) {
                 this.showSelectedLabCoursesCount.setForeground(Color.GREEN);
             }
-            this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
-            mainCourseEnabler(false);
-        } else if((this.mainCourseCount < 4 || this.mainCourseCount >= 6) && checkBox.isSelected()) {
+            this.showSelectedLabCoursesCount.setText(""+(this.labCourseCount));
+        } else if(this.labCourseCount >= 2 && checkBox.isSelected()) {
             checkBox.setSelected(false);
         } else {
-            deleteCourse(checkBox.getText());
-            this.mainCourseCount--;
+            deleteLabCourse(checkBox.getText());
+            this.labCourseCount--;
             this.showSelectedLabCoursesCount.setForeground(Color.RED);
-            this.showSelectedLabCoursesCount.setText(""+(this.mainCourseCount-4));
+            this.showSelectedLabCoursesCount.setText(""+(this.labCourseCount));
         }
     } 
     
-    //This function disables the main course checkboxes
-    private void mainCourseEnabler(boolean value) {
-        this.cse101CheckBox.setEnabled(value);
-        this.cse102CheckBox.setEnabled(value);
-        this.cse103CheckBox.setEnabled(value);
-        this.cse201CheckBox.setEnabled(value);
-        this.cse202CheckBox.setEnabled(value);
-        this.cse203CheckBox.setEnabled(value);
-        this.cse301CheckBox.setEnabled(value);
-        this.cse302CheckBox.setEnabled(value);
-        this.cse303CheckBox.setEnabled(value);
-    }
-    
     //This fucntion finds the index number of a Course array and deletes it
-    private void deleteCourse(String courseName) {
-        for(int i = 0; i < this.courses.size(); i++) {
-            if(this.courses.get(i).getCourseName().equals(courseName)) {
-                this.courses.remove(i);
+    private void deleteMainCourse(String courseName) {
+        for(int i = 0; i < this.mainCourses.size(); i++) {
+            if(this.mainCourses.get(i).getCourseName().equals(courseName)) {
+                this.mainCourses.remove(i);
+                return;
+            }
+        }
+    }
+    private void deleteLabCourse(String courseName) {
+        for(int i = 0; i < this.labCourses.size(); i++) {
+            if(this.labCourses.get(i).getCourseName().equals(courseName)) {
+                this.labCourses.remove(i);
                 return;
             }
         }
@@ -1880,13 +1911,14 @@ public class AddPanel extends javax.swing.JPanel {
     }
     
     private boolean addCourseData() {
-        if(this.courses.size()==6) {
-            this.student.setA(new Course(this.courses.get(0).getCourseName(), this.courses.get(0).getGradePoints()));
-            this.student.setB(new Course(this.courses.get(1).getCourseName(), this.courses.get(1).getGradePoints()));
-            this.student.setC(new Course(this.courses.get(2).getCourseName(), this.courses.get(2).getGradePoints()));
-            this.student.setD(new Course(this.courses.get(3).getCourseName(), this.courses.get(3).getGradePoints()));
-            this.student.setE(new Course(this.courses.get(4).getCourseName(), this.courses.get(4).getGradePoints()));
-            this.student.setF(new Course(this.courses.get(5).getCourseName(), this.courses.get(5).getGradePoints()));
+        if((this.mainCourseCount+this.labCourseCount) == 6) {
+            courseInit();
+            this.student.setA(this.courses.get(0));
+            this.student.setB(this.courses.get(1));
+            this.student.setC(this.courses.get(2));
+            this.student.setD(this.courses.get(3));
+            this.student.setE(this.courses.get(4));
+            this.student.setF(this.courses.get(5));
             return true;
         } else {
             return false;
