@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class DataHandler {
         private ArrayList<Student> students = new ArrayList();
         private Student currentStudent = new Student();
-        private int currentStudentIndex;
+        private int currentStudentIndex = -1;
 
     public int getCurrentStudentIndex() {
         return currentStudentIndex;
@@ -50,39 +50,39 @@ public class DataHandler {
     public void setStudents(ArrayList<Student> students) {
         this.students = students;
     }
-    
+
     public void addStudent(Student student) {
         this.students.add(student);
     }
-    
+
     public void dropStudent(int index) {
         this.students.remove(index);
     }
-    
+
     public void saveStudentData() {
-        if (checkSaveFile()){
-            try {
-                FileOutputStream fos = new FileOutputStream("student.dat");
-                ObjectOutputStream oos = new ObjectOutputStream(fos);   
-                oos.writeObject(this.students); // write students to ObjectOutputStream
-                oos.close(); 
-            } catch(Exception ex) {
-                ex.printStackTrace();
-            }
+        try {
+            FileOutputStream fos = new FileOutputStream("student.dat");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(this.students); // write students to ObjectOutputStream
+            oos.close();
+        } catch(Exception ex) {
+            ex.printStackTrace();
         }
     }
-    
+
     public void loadStudentData() {
-        try {
-            FileInputStream fis = new FileInputStream("student.dat");
-            ObjectInputStream ois = new ObjectInputStream(fis); 
-            this.students = (ArrayList<Student>) ois.readObject(); // write students from ObjectInputStream to this.students
-            ois.close();
-        } catch(Exception e) {
-            e.printStackTrace();
+        if (checkSaveFile()) {
+            try {
+                FileInputStream fis = new FileInputStream("student.dat");
+                ObjectInputStream ois = new ObjectInputStream(fis);
+                this.students = (ArrayList<Student>) ois.readObject(); // write  to this.students from ObjectInputStream
+                ois.close();
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
+            //DEBUG
+            printStudentData();
         }
-        //DEBUG 
-        printStudentData();
     }
     
     private boolean checkSaveFile() {
@@ -97,7 +97,7 @@ public class DataHandler {
             return false;
         }
     }
-    
+
     //DEBUG PRINT
     private void printStudentData() {
         for(Student eachStudent: this.students) {

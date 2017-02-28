@@ -20,6 +20,14 @@ class Course implements Serializable {
         this.gradePoints = gradePoints;
     }
 
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public void setGradePoints(double gradePoints) {
+        this.gradePoints = gradePoints;
+    }
+    
     public String getCourseName() {
         return courseName;
     }
