@@ -106,8 +106,9 @@ public class AddPanel extends javax.swing.JPanel {
         updateFindStudentErrorText = new javax.swing.JLabel();
         updateFoundStudentPanel = new javax.swing.JPanel();
         cancelFromUpdate = new javax.swing.JPanel();
-        jLabel47 = new javax.swing.JLabel();
         jSeparator15 = new javax.swing.JSeparator();
+        cancelFromUpdateLabel = new javax.swing.JLabel();
+        backToMainFromUpdateLabel = new javax.swing.JLabel();
         dropStudentSearchButton2 = new javax.swing.JPanel();
         dropStudentSearchButtonLabel2 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -745,13 +746,18 @@ public class AddPanel extends javax.swing.JPanel {
         });
         cancelFromUpdate.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel47.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel47.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel47.setText("CANCEL");
-        cancelFromUpdate.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 50, 50));
-
         jSeparator15.setForeground(new java.awt.Color(255, 255, 255));
         cancelFromUpdate.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 70, 20));
+
+        cancelFromUpdateLabel.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        cancelFromUpdateLabel.setForeground(new java.awt.Color(255, 255, 255));
+        cancelFromUpdateLabel.setText("CANCEL");
+        cancelFromUpdate.add(cancelFromUpdateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 50, 50));
+
+        backToMainFromUpdateLabel.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        backToMainFromUpdateLabel.setForeground(new java.awt.Color(255, 255, 255));
+        backToMainFromUpdateLabel.setText("BACK");
+        cancelFromUpdate.add(backToMainFromUpdateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 50, 50));
 
         updateFoundStudentPanel.add(cancelFromUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 500, 90, 50));
 
@@ -1105,7 +1111,7 @@ public class AddPanel extends javax.swing.JPanel {
         backFromMainSepResult.setForeground(new java.awt.Color(255, 255, 255));
         backFromResultView.add(backFromMainSepResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 160, 20));
 
-        resultViewPanel.add(backFromResultView, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, 230, 50));
+        resultViewPanel.add(backFromResultView, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 510, 230, 50));
 
         jLabel22.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
@@ -1385,7 +1391,7 @@ public class AddPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_addMothersNameFieldMouseClicked
 
     private void viewResultButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewResultButtonMouseClicked
-        //Need to implement dynamic views after setting up search fucntion
+        //TODO implement dynamic views after setting up search fucntion
         if(this.dataLoader.getCurrentStudentIndex() >= 0) {
             this.fromMain = true;
             this.backFromMainLabelResult.setVisible(true);
@@ -1417,23 +1423,29 @@ public class AddPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_mainFromAdmitMouseClicked
 
     private void dropStudentButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dropStudentButtonMouseClicked
-        //Need to implement dynamic views after setting up search fucntion
+        //Need to implement dynamic views after setting up search fucntion 
         if(this.dataLoader.getCurrentStudentIndex() >= 0) {
+            this.fromMain = true;
+            this.backToMainFromUpdateLabel.setVisible(true);
+            this.cancelFromUpdateLabel.setVisible(false);
             updateStudentShowDetails();
-            clearText();
             displayUpdateStudentPanel(false, true);
+            clearText();
         } else {
+            this.fromMain = false;
+            this.backToMainFromUpdateLabel.setVisible(false);
+            this.cancelFromUpdateLabel.setVisible(true);
             displayUpdateStudentPanel(true, false);
         }
     }//GEN-LAST:event_dropStudentButtonMouseClicked
 
     private void findStudentFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_findStudentFieldMouseClicked
-        this.findStudentField.setText("");
+        this.findStudentField.setText("171-15-");
         clearText();
     }//GEN-LAST:event_findStudentFieldMouseClicked
 
     private void findStudentDropFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_findStudentDropFieldMouseClicked
-        this.findStudentDropField.setText("");
+        this.findStudentDropField.setText("171-15-");
         clearText();
     }//GEN-LAST:event_findStudentDropFieldMouseClicked
 
@@ -1444,7 +1456,16 @@ public class AddPanel extends javax.swing.JPanel {
 
     private void cancelFromUpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelFromUpdateMouseClicked
         displayUpdateStudentPanel(true, false);
-        this.updateFindStudentErrorText.setText("");//DONE
+        this.updateFindStudentErrorText.setText("");
+        if(this.fromMain) {
+            displayUpdateStudentPanel(false, false);
+            panelVisiblity(true, false, false, false);
+            refreshData();
+            return;
+        }
+        refreshData();
+        displayUpdateStudentPanel(true, false);
+//DONE
     }//GEN-LAST:event_cancelFromUpdateMouseClicked
 
     private void mainFromResult1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainFromResult1MouseClicked
@@ -1453,7 +1474,7 @@ public class AddPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_mainFromResult1MouseClicked
 
     private void resultSearchFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_resultSearchFieldMouseClicked
-        this.resultSearchField.setText("");
+        this.resultSearchField.setText("171-15-");
     }//GEN-LAST:event_resultSearchFieldMouseClicked
 
     private void createProfileButtonPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createProfileButtonPanel4MouseClicked
@@ -1613,7 +1634,9 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JPanel backFromResultView;
     private javax.swing.JLabel backLabelResult;
     private javax.swing.JSeparator backSepResult;
+    private javax.swing.JLabel backToMainFromUpdateLabel;
     private javax.swing.JPanel cancelFromUpdate;
+    private javax.swing.JLabel cancelFromUpdateLabel;
     private javax.swing.JTextField courseAGrade;
     private javax.swing.JLabel courseAName;
     private javax.swing.JLabel courseANameGrade;
@@ -1689,7 +1712,6 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator13;
