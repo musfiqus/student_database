@@ -3,10 +3,6 @@ package bd.edu.daffodilvarsity.studentdatabase;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 
-/**
- *
- * @author Mushfiqus Salehin
- */
 public class MainFrame {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Student Database");

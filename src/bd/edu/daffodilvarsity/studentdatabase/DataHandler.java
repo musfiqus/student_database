@@ -9,10 +9,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-/**
- *
- * @author Mushfiqus Salehin
- */
 public class DataHandler {
         private ArrayList<Student> students = new ArrayList();
         private Student currentStudent = new Student();

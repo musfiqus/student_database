@@ -5,10 +5,6 @@ import java.util.ArrayList;
 import java.util.Objects;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-/**
- *
- * @author Mushfiqus Salehin
- */
 
 public class AddPanel extends javax.swing.JPanel {
     

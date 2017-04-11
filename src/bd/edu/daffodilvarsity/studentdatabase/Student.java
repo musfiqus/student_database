@@ -2,10 +2,6 @@ package bd.edu.daffodilvarsity.studentdatabase;
 
 import java.io.Serializable;
 
-/**
- *
- * @author Mushfiqus Salehin
- */
 public class Student implements Serializable {
     private String fullName;
     private String idNum;

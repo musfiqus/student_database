@@ -2,10 +2,6 @@ package bd.edu.daffodilvarsity.studentdatabase;
 
 import java.io.Serializable;
 
-/**
- *
- * @author Mushfiqus Salehin
- */
 class Course implements Serializable {
     private String courseName;
     private double gradePoints;
