@@ -1371,7 +1371,7 @@ public class AddPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_addStudentFullNameMouseClicked
 
     private void addStudentIDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addStudentIDMouseClicked
-        this.addStudentID.setText("");
+        this.addStudentID.setText("171-15-");
         clearText();
     }//GEN-LAST:event_addStudentIDMouseClicked
 
@@ -1964,6 +1964,7 @@ public class AddPanel extends javax.swing.JPanel {
             this.dataLoader.addStudent(this.student);
             this.dataLoader.saveStudentData();
             refreshData();
+            clearCheckBoxes();
             errorDialogue("Student was admitted!", 5);
         } else {
             errorDialogue("Please check if all the informations were typed correctly.", -1);
@@ -2226,4 +2227,28 @@ public class AddPanel extends javax.swing.JPanel {
             default: break;
         }
     } 
+    
+    public void clearCheckBoxes() {
+        cse101CheckBox.setSelected(false);
+        cse102CheckBox.setSelected(false);
+        cse103CheckBox.setSelected(false);
+        cse111CheckBox.setSelected(false);
+        cse112CheckBox.setSelected(false);
+        cse201CheckBox.setSelected(false);
+        cse202CheckBox.setSelected(false);
+        cse203CheckBox.setSelected(false);
+        cse211CheckBox.setSelected(false);
+        cse212CheckBox.setSelected(false);
+        cse301CheckBox.setSelected(false);
+        cse302CheckBox.setSelected(false);
+        cse303CheckBox.setSelected(false);
+        cse311CheckBox.setSelected(false);
+        cse312CheckBox.setSelected(false);
+        this.mainCourseCount = 0;
+        this.labCourseCount = 0;
+        this.showSelectedLabCoursesCount.setForeground(Color.RED);
+        this.showSelectedLabCoursesCount.setText(""+(this.labCourseCount));
+        this.showSelectedCoursesCount.setForeground(Color.RED);
+        this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+    }
 }
