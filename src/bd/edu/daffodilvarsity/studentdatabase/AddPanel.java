@@ -1355,7 +1355,7 @@ public class AddPanel extends javax.swing.JPanel {
         resultRemarks.setText("DUMMY TEXT");
         resultRemarks.setBorder(null);
         resultRemarks.setCaretColor(new java.awt.Color(255, 255, 255));
-        resultViewPanel.add(resultRemarks, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 430, 120, 20));
+        resultViewPanel.add(resultRemarks, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 430, 210, 20));
 
         resultPanel.add(resultViewPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -2089,55 +2089,56 @@ public class AddPanel extends javax.swing.JPanel {
         labPoints += this.dataLoader.getCurrentStudent().getE().getGradePoints();
         labPoints += this.dataLoader.getCurrentStudent().getF().getGradePoints();
         double cgpa = ((mainPoints*3d) + (labPoints*1d)) / 14d;
-        if(cgpa == 0.0) {
+        System.out.println("cgpa "+cgpa);
+        if(cgpa >= 0.0 && cgpa < 2.0) {
             this.resultCGPA.setForeground(Color.red);
-            this.resultCGPA.setText(""+cgpa);
+            this.resultCGPA.setText("0.0");
             this.resultRemarks.setForeground(Color.red);
             this.resultRemarks.setText("FAILED");
-        } else if(cgpa == 2.0) {
+        } else if(cgpa >= 2.0 && cgpa < 2.25) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText(""+cgpa);
+            this.resultCGPA.setText("2.0");
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("PASS");
-        } else if(cgpa == 2.25) {
+        } else if(cgpa >= 2.25 && cgpa < 2.50) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText(""+cgpa);
+            this.resultCGPA.setText("2.25");
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("BELOW AVERAGE");
-        } else if(cgpa == 2.50) {
+        } else if(cgpa >= 2.50 && cgpa < 2.75) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText(""+cgpa);
+            this.resultCGPA.setText("2.50");
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("AVERAGE");
-        } else if(cgpa == 2.75) {
+        } else if(cgpa >= 2.75 && cgpa < 3.0) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText(""+cgpa);
+            this.resultCGPA.setText("2.75");
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("ABOVE AVERAGE");
-        } else if(cgpa == 3.0) {
+        } else if(cgpa >= 3.0 && cgpa < 3.25) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText(""+cgpa);
+            this.resultCGPA.setText("3.0");
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("SATISFACTORY");
-        } else if(cgpa == 3.25) {
+        } else if(cgpa >= 3.25 && cgpa < 3.50) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText(""+cgpa);
+            this.resultCGPA.setText("3.25");
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("GOOD");
-        } else if(cgpa == 3.5) {
+        } else if(cgpa >= 3.5 && cgpa < 3.75) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText(""+cgpa);
+            this.resultCGPA.setText("3.50");
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("VERY GOOD");
-        } else if(cgpa == 3.75) {
+        } else if(cgpa >= 3.75 && cgpa < 4.0) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText(""+cgpa);
+            this.resultCGPA.setText("3.75");
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("EXCELLENT");
         } else if(cgpa == 4.0) {
-            this.resultCGPA.setForeground(Color.blue);
+            this.resultCGPA.setForeground(Color.CYAN);
             this.resultCGPA.setText(""+cgpa);
-            this.resultRemarks.setForeground(Color.blue);
+            this.resultRemarks.setForeground(Color.CYAN);
             this.resultRemarks.setText("OUTSTANDING");
         }
     }
