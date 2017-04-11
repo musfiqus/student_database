@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package bd.edu.daffodilvarsity.studentdatabase;
 
 import java.awt.Color;
@@ -11,10 +7,7 @@ import java.util.Objects;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Mushfiqus Salehin
- */
+
 public class AddPanel extends javax.swing.JPanel {
     /**
      * Creates new form AddPanel
