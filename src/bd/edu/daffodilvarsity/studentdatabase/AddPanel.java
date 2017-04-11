@@ -1,4 +1,3 @@
-
 package bd.edu.daffodilvarsity.studentdatabase;
 
 import java.awt.Color;
@@ -1822,8 +1821,6 @@ public class AddPanel extends javax.swing.JPanel {
         if(checkBox.isSelected() && this.mainCourseCount < 4) {
             this.mainCourses.add(new Course(checkBox.getText(), 0.0));
             this.mainCourseCount++;
-            //DEBUG
-            System.out.println(""+this.mainCourseCount);
             this.showSelectedCoursesCount.setForeground(Color.RED);
             if(this.mainCourseCount == 4) {
                 this.showSelectedCoursesCount.setForeground(Color.GREEN);
@@ -1843,8 +1840,6 @@ public class AddPanel extends javax.swing.JPanel {
         if(checkBox.isSelected() && this.labCourseCount < 2) {
             this.labCourses.add(new Course(checkBox.getText(), 0.0));
             this.labCourseCount++;
-            //DEBUG
-            System.out.println(""+this.labCourseCount);
             this.showSelectedLabCoursesCount.setForeground(Color.RED);
             if (this.labCourseCount == 2) {
                 this.showSelectedLabCoursesCount.setForeground(Color.GREEN);
@@ -1984,6 +1979,7 @@ public class AddPanel extends javax.swing.JPanel {
         this.updateFoundStudentPanel.setVisible(found);
     }
     
+    //Geting updated data if valid
     private boolean getUpdateData() {
         if(isValidGrade(this.courseAGrade.getText()) &&  isValidGrade(this.courseBGrade.getText()) &&  isValidGrade(this.courseCGrade.getText()) &&  isValidGrade(this.courseDGrade.getText()) &&  isValidGrade(this.courseEGrade.getText()) &&  isValidGrade(this.courseFGrade.getText()))
         {
@@ -2001,6 +1997,7 @@ public class AddPanel extends javax.swing.JPanel {
         return false;
     }
     
+    //Showing student details on update panel
     private void updateStudentShowDetails() {
         this.updateFullName.setText(this.dataLoader.getCurrentStudent().getFullName().toUpperCase());
         this.updateFathersName.setText(this.dataLoader.getCurrentStudent().getFatherName().toUpperCase());
@@ -2028,7 +2025,6 @@ public class AddPanel extends javax.swing.JPanel {
     }
     
     //Grade value checker
-    
     private boolean isDouble(String str) {
         try {
             Double.parseDouble(str);
@@ -2054,6 +2050,7 @@ public class AddPanel extends javax.swing.JPanel {
         this.resultViewPanel.setVisible(view);
     }
     
+    //Showing result on screen
     private void resultShowDetails() {
         this.resultFullName.setText(this.dataLoader.getCurrentStudent().getFullName().toUpperCase());
         this.resultFathersName.setText(this.dataLoader.getCurrentStudent().getFatherName().toUpperCase());
@@ -2081,6 +2078,7 @@ public class AddPanel extends javax.swing.JPanel {
         generateRemarks();
     }
     
+    //Generating remarks and cgpa based on marks
     private void generateRemarks() {
         double mainPoints = 0;
         double labPoints = 0;
@@ -2176,6 +2174,7 @@ public class AddPanel extends javax.swing.JPanel {
         this.dataLoader.setCurrentStudentIndex(index);
     }
     
+    //Resetting data on screen
     private void refreshData() {
         this.dataLoader.setCurrentStudent(null);
         this.dataLoader.setCurrentStudentIndex(-1);
@@ -2226,8 +2225,4 @@ public class AddPanel extends javax.swing.JPanel {
             default: break;
         }
     } 
-    
-    private void backToMainVisible(boolean value) {
-        
-    }
 }

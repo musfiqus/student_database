@@ -1,4 +1,3 @@
-
 package bd.edu.daffodilvarsity.studentdatabase;
 
 import java.io.FileInputStream;
@@ -47,14 +46,17 @@ public class DataHandler {
         this.students = students;
     }
 
+    //Adding new student
     public void addStudent(Student student) {
         this.students.add(student);
     }
 
+    //Drop student from database
     public void dropStudent(int index) {
         this.students.remove(index);
     }
 
+    //Saving student data
     public void saveStudentData() {
         try {
             FileOutputStream fos = new FileOutputStream("student.dat");
@@ -66,6 +68,7 @@ public class DataHandler {
         }
     }
 
+    //Load data if available
     public void loadStudentData() {
         if (checkSaveFile()) {
             try {
@@ -76,11 +79,10 @@ public class DataHandler {
             } catch(Exception e) {
                 e.printStackTrace();
             }
-            //DEBUG
-            printStudentData();
         }
     }
     
+    //Checking if save file exists
     private boolean checkSaveFile() {
         Path path = Paths.get("student.dat");
 
@@ -91,23 +93,6 @@ public class DataHandler {
             return false;
         } else {
             return false;
-        }
-    }
-
-    //DEBUG PRINT
-    private void printStudentData() {
-        for(Student eachStudent: this.students) {
-            System.out.println("Full name: "+eachStudent.getFullName());
-            System.out.println("ID: "+eachStudent.getIdNum());
-            System.out.println("Father's name: "+eachStudent.getFatherName());
-            System.out.println("Mother's name: "+eachStudent.getMotherName());
-            System.out.println("Gender: "+eachStudent.getGender());
-            System.out.println("Course A: "+eachStudent.getA().getCourseName());
-            System.out.println("Course B: "+eachStudent.getB().getCourseName());
-            System.out.println("Course C: "+eachStudent.getC().getCourseName());
-            System.out.println("Course D: "+eachStudent.getD().getCourseName());
-            System.out.println("Course E: "+eachStudent.getE().getCourseName());
-            System.out.println("Course F: "+eachStudent.getF().getCourseName());
         }
     }
 }
