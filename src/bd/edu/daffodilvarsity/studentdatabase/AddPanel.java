@@ -9,9 +9,7 @@ import javax.swing.JOptionPane;
 
 
 public class AddPanel extends javax.swing.JPanel {
-    /**
-     * Copyright <2017> <Al-Shahriar>
-     */
+    
     public AddPanel() {
         initComponents();
         panelVisiblity(true, false, false, false);
