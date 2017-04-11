@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 public class AddPanel extends javax.swing.JPanel {
     /**
-     * Creates new form AddPanel
+     * Copyright <2017> <Al-Shahriar>
      */
     public AddPanel() {
         initComponents();
