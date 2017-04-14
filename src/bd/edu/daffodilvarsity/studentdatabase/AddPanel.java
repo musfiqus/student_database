@@ -2383,55 +2383,71 @@ public class AddPanel extends javax.swing.JPanel {
         System.out.println("cgpa "+cgpa);
         if(cgpa >= 0.0 && cgpa < 2.0) {
             this.resultCGPA.setForeground(Color.red);
-            this.resultCGPA.setText("0.0");
+            this.resultCGPA.setText(cgpaGen(cgpa));
             this.resultRemarks.setForeground(Color.red);
             this.resultRemarks.setText("FAILED");
         } else if(cgpa >= 2.0 && cgpa < 2.25) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText("2.0");
+            this.resultCGPA.setText(cgpaGen(cgpa));
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("PASS");
         } else if(cgpa >= 2.25 && cgpa < 2.50) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText("2.25");
+            this.resultCGPA.setText(cgpaGen(cgpa));
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("BELOW AVERAGE");
         } else if(cgpa >= 2.50 && cgpa < 2.75) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText("2.50");
+            this.resultCGPA.setText(cgpaGen(cgpa));
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("AVERAGE");
         } else if(cgpa >= 2.75 && cgpa < 3.0) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText("2.75");
+            this.resultCGPA.setText(cgpaGen(cgpa));
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("ABOVE AVERAGE");
         } else if(cgpa >= 3.0 && cgpa < 3.25) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText("3.0");
+            this.resultCGPA.setText(cgpaGen(cgpa));
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("SATISFACTORY");
         } else if(cgpa >= 3.25 && cgpa < 3.50) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText("3.25");
+            this.resultCGPA.setText(cgpaGen(cgpa));
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("GOOD");
         } else if(cgpa >= 3.5 && cgpa < 3.75) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText("3.50");
+            this.resultCGPA.setText(cgpaGen(cgpa));
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("VERY GOOD");
         } else if(cgpa >= 3.75 && cgpa < 4.0) {
             this.resultCGPA.setForeground(Color.green);
-            this.resultCGPA.setText("3.75");
+            this.resultCGPA.setText(cgpaGen(cgpa));
             this.resultRemarks.setForeground(Color.green);
             this.resultRemarks.setText("EXCELLENT");
         } else if(cgpa == 4.0) {
             this.resultCGPA.setForeground(Color.CYAN);
-            this.resultCGPA.setText(""+cgpa);
+            this.resultCGPA.setText(cgpaGen(cgpa));
             this.resultRemarks.setForeground(Color.CYAN);
             this.resultRemarks.setText("OUTSTANDING");
         }
+    }
+    
+    private String cgpaGen(double cgpa) {
+        String cgpaSTR = Double.toString(cgpa);
+        int lastDigit = 0;
+        //Incrementing last decimal if next one is greater than or equal to 5
+        if(cgpaSTR.length() >= 4) {
+            lastDigit = Integer.parseInt(cgpaSTR.substring(3, 4));
+            if(Integer.parseInt(cgpaSTR.substring(4, 5)) >= 5) {
+                lastDigit = Integer.parseInt(cgpaSTR.substring(3, 4));
+                lastDigit++;
+            }
+            cgpaSTR =  cgpaSTR.substring(0, 4);
+            cgpaSTR = cgpaSTR.substring(0, 3) + Integer.toString(lastDigit);
+        } 
+        return cgpaSTR;
     }
     
     /** Universal methods **/
@@ -2517,6 +2533,7 @@ public class AddPanel extends javax.swing.JPanel {
         switch (n) {
             case JOptionPane.OK_OPTION: this.dataLoader.dropStudent(this.dataLoader.getCurrentStudentIndex());
                                         this.dataLoader.saveStudentData();
+                                        this.dataLoader.loadStudentData();
                                         refreshData();
                                         panelVisiblity(true, false, false, false);
                                         break;
