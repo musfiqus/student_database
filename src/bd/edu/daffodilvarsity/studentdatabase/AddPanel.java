@@ -10,7 +10,12 @@ public class AddPanel extends javax.swing.JPanel {
     
     public AddPanel() {
         initComponents();
-        panelVisiblity(true, false, false, false);
+        db = new DatabaseHelper();
+        if(!db.checkDBFile()) {
+            db.createDB();
+        }
+        loginVisiblity(true, false);
+        panelVisiblity(false, false, false, false);
     }
 
     /**
@@ -195,6 +200,35 @@ public class AddPanel extends javax.swing.JPanel {
         resultCourseAGrade = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
         resultRemarks = new javax.swing.JTextField();
+        registerPanel = new javax.swing.JPanel();
+        welcomeText2 = new javax.swing.JLabel();
+        signUpButton = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jSeparator8 = new javax.swing.JSeparator();
+        jSeparator16 = new javax.swing.JSeparator();
+        signupUNameField = new javax.swing.JTextField();
+        signupPasswordField = new javax.swing.JPasswordField();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jSeparator28 = new javax.swing.JSeparator();
+        jSeparator12 = new javax.swing.JSeparator();
+        signupMasterPasswordField = new javax.swing.JPasswordField();
+        backFromSignUp = new javax.swing.JPanel();
+        backLabelResult1 = new javax.swing.JLabel();
+        backSepResult1 = new javax.swing.JSeparator();
+        loginPanel = new javax.swing.JPanel();
+        welcomeText1 = new javax.swing.JLabel();
+        loginButton = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
+        jSeparator6 = new javax.swing.JSeparator();
+        admitStudentButton1 = new javax.swing.JPanel();
+        jSeparator11 = new javax.swing.JSeparator();
+        jLabel45 = new javax.swing.JLabel();
+        jSeparator14 = new javax.swing.JSeparator();
+        loginUNameField = new javax.swing.JTextField();
+        loginPWField = new javax.swing.JPasswordField();
+        jLabel33 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(36, 47, 65));
         setForeground(new java.awt.Color(204, 204, 204));
@@ -1356,6 +1390,204 @@ public class AddPanel extends javax.swing.JPanel {
         resultPanel.add(resultViewPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         add(resultPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        registerPanel.setBackground(new java.awt.Color(36, 47, 65));
+        registerPanel.setForeground(new java.awt.Color(204, 204, 204));
+        registerPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        welcomeText2.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        welcomeText2.setForeground(new java.awt.Color(255, 255, 255));
+        welcomeText2.setText("Administrator Signup");
+        registerPanel.add(welcomeText2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, 270, 50));
+
+        signUpButton.setBackground(new java.awt.Color(50, 132, 255));
+        signUpButton.setForeground(new java.awt.Color(255, 255, 255));
+        signUpButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signUpButtonMouseClicked(evt);
+            }
+        });
+        signUpButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel35.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel35.setText("SIGNUP");
+        signUpButton.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 80, 40));
+
+        registerPanel.add(signUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, 110, 40));
+
+        jSeparator8.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator8.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        registerPanel.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 210, 10));
+
+        jSeparator16.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator16.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        registerPanel.add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 210, 10));
+
+        signupUNameField.setBackground(new java.awt.Color(36, 47, 65));
+        signupUNameField.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        signupUNameField.setForeground(new java.awt.Color(255, 255, 255));
+        signupUNameField.setText("USERNAME");
+        signupUNameField.setBorder(null);
+        signupUNameField.setCaretColor(new java.awt.Color(255, 255, 255));
+        signupUNameField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signupUNameFieldMouseClicked(evt);
+            }
+        });
+        registerPanel.add(signupUNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 230, 40));
+
+        signupPasswordField.setBackground(new java.awt.Color(36, 47, 65));
+        signupPasswordField.setForeground(new java.awt.Color(255, 255, 255));
+        signupPasswordField.setText("PASSWORD");
+        signupPasswordField.setBorder(null);
+        signupPasswordField.setCaretColor(new java.awt.Color(255, 255, 255));
+        signupPasswordField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signupPasswordFieldMouseClicked(evt);
+            }
+        });
+        registerPanel.add(signupPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 210, 40));
+
+        jLabel39.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel39.setText("New Password");
+        registerPanel.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 140, 40));
+
+        jLabel44.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel44.setText("Master Password");
+        registerPanel.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 170, 40));
+
+        jLabel47.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel47.setText("New Username");
+        registerPanel.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 140, 40));
+
+        jSeparator28.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator28.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        registerPanel.add(jSeparator28, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, 20, 330));
+
+        jSeparator12.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator12.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        registerPanel.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 210, 10));
+
+        signupMasterPasswordField.setBackground(new java.awt.Color(36, 47, 65));
+        signupMasterPasswordField.setForeground(new java.awt.Color(255, 255, 255));
+        signupMasterPasswordField.setText("PASSWORD");
+        signupMasterPasswordField.setBorder(null);
+        signupMasterPasswordField.setCaretColor(new java.awt.Color(255, 255, 255));
+        signupMasterPasswordField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signupMasterPasswordFieldMouseClicked(evt);
+            }
+        });
+        registerPanel.add(signupMasterPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 210, 40));
+
+        backFromSignUp.setBackground(new java.awt.Color(36, 47, 65));
+        backFromSignUp.setForeground(new java.awt.Color(255, 255, 255));
+        backFromSignUp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backFromSignUpMouseClicked(evt);
+            }
+        });
+        backFromSignUp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        backLabelResult1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        backLabelResult1.setForeground(new java.awt.Color(255, 255, 255));
+        backLabelResult1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        backLabelResult1.setText("BACK");
+        backFromSignUp.add(backLabelResult1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 50, 50));
+
+        backSepResult1.setForeground(new java.awt.Color(255, 255, 255));
+        backFromSignUp.add(backSepResult1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 50, 20));
+
+        registerPanel.add(backFromSignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, 70, 50));
+
+        add(registerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        loginPanel.setBackground(new java.awt.Color(36, 47, 65));
+        loginPanel.setForeground(new java.awt.Color(204, 204, 204));
+        loginPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        welcomeText1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        welcomeText1.setForeground(new java.awt.Color(255, 255, 255));
+        welcomeText1.setText("Administrator Login");
+        loginPanel.add(welcomeText1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 230, 50));
+
+        loginButton.setBackground(new java.awt.Color(50, 132, 255));
+        loginButton.setForeground(new java.awt.Color(255, 255, 255));
+        loginButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginButtonMouseClicked(evt);
+            }
+        });
+        loginButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel34.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel34.setText("LOGIN");
+        loginButton.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 60, 40));
+
+        loginPanel.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, 100, 40));
+
+        jSeparator6.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator6.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        loginPanel.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 310, 10));
+
+        admitStudentButton1.setBackground(new java.awt.Color(36, 47, 65));
+        admitStudentButton1.setForeground(new java.awt.Color(255, 255, 255));
+        admitStudentButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                admitStudentButton1MouseClicked(evt);
+            }
+        });
+        admitStudentButton1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jSeparator11.setForeground(new java.awt.Color(255, 255, 255));
+        admitStudentButton1.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 80, 20));
+
+        jLabel45.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel45.setText("Register here");
+        admitStudentButton1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 30));
+
+        loginPanel.add(admitStudentButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 460, 110, 40));
+
+        jSeparator14.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator14.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        loginPanel.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 310, 10));
+
+        loginUNameField.setBackground(new java.awt.Color(36, 47, 65));
+        loginUNameField.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        loginUNameField.setForeground(new java.awt.Color(255, 255, 255));
+        loginUNameField.setText("USERNAME");
+        loginUNameField.setBorder(null);
+        loginUNameField.setCaretColor(new java.awt.Color(255, 255, 255));
+        loginUNameField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginUNameFieldMouseClicked(evt);
+            }
+        });
+        loginPanel.add(loginUNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, 330, 40));
+
+        loginPWField.setBackground(new java.awt.Color(36, 47, 65));
+        loginPWField.setForeground(new java.awt.Color(255, 255, 255));
+        loginPWField.setText("PASSWORD");
+        loginPWField.setBorder(null);
+        loginPWField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginPWFieldMouseClicked(evt);
+            }
+        });
+        loginPanel.add(loginPWField, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 310, 40));
+
+        jLabel33.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel33.setText("Don't have access yet?");
+        loginPanel.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 450, 140, 50));
+
+        add(loginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     /** Below this line are the IDE Generated methods **/
@@ -1454,7 +1686,6 @@ public class AddPanel extends javax.swing.JPanel {
         }
         refreshData();
         displayUpdateStudentPanel(true, false);
-//DONE
     }//GEN-LAST:event_cancelFromUpdateMouseClicked
 
     private void mainFromResult1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainFromResult1MouseClicked
@@ -1537,7 +1768,7 @@ public class AddPanel extends javax.swing.JPanel {
             if(n != -1) {
                 setCurrentStudent(n);
                 this.findStudentErrorText.setForeground(Color.GREEN);
-                this.findStudentErrorText.setText(this.findStudentField.getText()+" is registered."+" \nPress XXX or XXX for more.");
+                this.findStudentErrorText.setText(this.findStudentField.getText()+" is registered."+" \nPress UPDATE or RESULT for more.");
             } else {
                 this.findStudentErrorText.setText(this.findStudentField.getText()+" was not found!");
             }
@@ -1604,6 +1835,42 @@ public class AddPanel extends javax.swing.JPanel {
             errorDialogue("Student data was not updated!\nMake sure you typed the grades correctly.", -1);
         }
     }//GEN-LAST:event_updateButtonMouseClicked
+
+    private void loginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButtonMouseClicked
+        login();
+    }//GEN-LAST:event_loginButtonMouseClicked
+
+    private void admitStudentButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admitStudentButton1MouseClicked
+        loginVisiblity(false, true);
+    }//GEN-LAST:event_admitStudentButton1MouseClicked
+
+    private void loginUNameFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginUNameFieldMouseClicked
+        this.loginUNameField.setText("");
+    }//GEN-LAST:event_loginUNameFieldMouseClicked
+
+    private void signUpButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpButtonMouseClicked
+        signup();
+    }//GEN-LAST:event_signUpButtonMouseClicked
+
+    private void signupUNameFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signupUNameFieldMouseClicked
+        this.signupUNameField.setText("");
+    }//GEN-LAST:event_signupUNameFieldMouseClicked
+
+    private void loginPWFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginPWFieldMouseClicked
+        this.loginPWField.setText("");
+    }//GEN-LAST:event_loginPWFieldMouseClicked
+
+    private void backFromSignUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backFromSignUpMouseClicked
+        loginVisiblity(true, false);
+    }//GEN-LAST:event_backFromSignUpMouseClicked
+
+    private void signupPasswordFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signupPasswordFieldMouseClicked
+        this.signupPasswordField.setText("");
+    }//GEN-LAST:event_signupPasswordFieldMouseClicked
+
+    private void signupMasterPasswordFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signupMasterPasswordFieldMouseClicked
+        this.signupMasterPasswordField.setText("");
+    }//GEN-LAST:event_signupMasterPasswordFieldMouseClicked
     // </editor-fold>  
     
     /** Below this line are the IDE generated variables **/
@@ -1618,11 +1885,15 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JTextField addStudentID;
     private javax.swing.JPanel addStudentPanel;
     private javax.swing.JPanel admitStudentButton;
+    private javax.swing.JPanel admitStudentButton1;
     private javax.swing.JLabel backFromMainLabelResult;
     private javax.swing.JSeparator backFromMainSepResult;
     private javax.swing.JPanel backFromResultView;
+    private javax.swing.JPanel backFromSignUp;
     private javax.swing.JLabel backLabelResult;
+    private javax.swing.JLabel backLabelResult1;
     private javax.swing.JSeparator backSepResult;
+    private javax.swing.JSeparator backSepResult1;
     private javax.swing.JLabel backToMainFromUpdateLabel;
     private javax.swing.JPanel cancelFromUpdate;
     private javax.swing.JLabel cancelFromUpdateLabel;
@@ -1694,17 +1965,28 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
+    private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;
+    private javax.swing.JSeparator jSeparator14;
     private javax.swing.JSeparator jSeparator15;
+    private javax.swing.JSeparator jSeparator16;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator21;
     private javax.swing.JSeparator jSeparator22;
@@ -1713,11 +1995,18 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator25;
     private javax.swing.JSeparator jSeparator26;
     private javax.swing.JSeparator jSeparator27;
+    private javax.swing.JSeparator jSeparator28;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JPanel loginButton;
+    private javax.swing.JPasswordField loginPWField;
+    private javax.swing.JPanel loginPanel;
+    private javax.swing.JTextField loginUNameField;
     private javax.swing.JPanel mainFromAdmit;
     private javax.swing.JPanel mainFromDrop1;
     private javax.swing.JPanel mainFromResult1;
@@ -1737,6 +2026,7 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JLabel nameLabel7;
     private javax.swing.JLabel nameLabel8;
     private javax.swing.JLabel nameLabel9;
+    private javax.swing.JPanel registerPanel;
     private javax.swing.JTextField resultCGPA;
     private javax.swing.JTextField resultCourseAGrade;
     private javax.swing.JLabel resultCourseAName;
@@ -1770,6 +2060,10 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JPanel resultViewPanel;
     private javax.swing.JLabel showSelectedCoursesCount;
     private javax.swing.JLabel showSelectedLabCoursesCount;
+    private javax.swing.JPanel signUpButton;
+    private javax.swing.JPasswordField signupMasterPasswordField;
+    private javax.swing.JPasswordField signupPasswordField;
+    private javax.swing.JTextField signupUNameField;
     private javax.swing.JPanel updateButton;
     private javax.swing.JTextField updateFathersName;
     private javax.swing.JLabel updateFindStudentErrorText;
@@ -1783,11 +2077,13 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JPanel viewResultButton;
     private javax.swing.JPanel welcomePanel;
     private javax.swing.JLabel welcomeText;
+    private javax.swing.JLabel welcomeText1;
+    private javax.swing.JLabel welcomeText2;
     // End of variables declaration//GEN-END:variables
     // </editor-fold>  
     
     /** Custom variables **/
-    
+    DatabaseHelper db;
     private DataHandler dataLoader = new DataHandler();
     private Student student = new Student();
     private ArrayList<Course> mainCourses = new ArrayList<>();
@@ -1796,8 +2092,6 @@ public class AddPanel extends javax.swing.JPanel {
     private int mainCourseCount = 0;
     private int labCourseCount = 0;
     private boolean fromMain = false;
-   
-    //K THEN LET IT RAIN DATA
     
     /** Admit panel methods **/  
     //Creates a empty course arraylist
@@ -2149,6 +2443,11 @@ public class AddPanel extends javax.swing.JPanel {
         this.updateStudentPanel.setVisible(dropStudentPanel);
         this.resultPanel.setVisible(viewResultPanel);
     }
+    //This method shows one panel at a time on screen
+    private void loginVisiblity(boolean loginPanel, boolean registerPanel){
+        this.loginPanel.setVisible(loginPanel);
+        this.registerPanel.setVisible(registerPanel);
+    }
 
     //Screen clearing methods
     private void clearText() {
@@ -2201,6 +2500,8 @@ public class AddPanel extends javax.swing.JPanel {
             displayUpdateStudentPanel(true, false);
         } else if(n == JOptionPane.ERROR_MESSAGE && whichField == 5){
             panelVisiblity(true, false, false, false);
+        } else if(n == JOptionPane.ERROR_MESSAGE && whichField == 6){
+            loginVisiblity(true, false);
         } else {
             //DO NOTHING JUST DISPLAY MESSAGE
         }
@@ -2246,5 +2547,35 @@ public class AddPanel extends javax.swing.JPanel {
         this.showSelectedLabCoursesCount.setText(""+(this.labCourseCount));
         this.showSelectedCoursesCount.setForeground(Color.RED);
         this.showSelectedCoursesCount.setText(""+this.mainCourseCount);
+    }
+    
+    public void login() {
+        String username = this.loginUNameField.getText();
+        char[] passwordChar = this.loginPWField.getPassword();
+        String password = new String(passwordChar);
+        boolean auth = db.authenticate(username, password);
+        if(auth) {
+            loginVisiblity(false, false);
+            panelVisiblity(true, false, false, false);
+        }
+        else {
+            errorDialogue("Invalid username or password!", -1);
+        }
+    }
+    
+    public void signup() {
+        String username = this.signupUNameField.getText();
+        String password = new String(this.signupPasswordField.getPassword());
+        String masterPass = new String(this.signupMasterPasswordField.getPassword());
+        if(db.authenticate(masterPass)) {
+            int valid = db.addAdmin(username, password);
+            if(valid == 1) {
+                errorDialogue("Account successfully created!", 6);
+            } else if (valid == -1) {
+                errorDialogue("Username already exists! Try again.", -1);
+            }
+        } else {
+            errorDialogue("Wrong master password! Try again.", -1);
+        }
     }
 }
