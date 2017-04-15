@@ -208,15 +208,16 @@ public class AddPanel extends javax.swing.JPanel {
         jSeparator16 = new javax.swing.JSeparator();
         signupUNameField = new javax.swing.JTextField();
         signupPasswordField = new javax.swing.JPasswordField();
-        jLabel39 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
         jSeparator28 = new javax.swing.JSeparator();
         jSeparator12 = new javax.swing.JSeparator();
         signupMasterPasswordField = new javax.swing.JPasswordField();
         backFromSignUp = new javax.swing.JPanel();
         backLabelResult1 = new javax.swing.JLabel();
         backSepResult1 = new javax.swing.JSeparator();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         loginPanel = new javax.swing.JPanel();
         welcomeText1 = new javax.swing.JLabel();
         loginButton = new javax.swing.JPanel();
@@ -229,6 +230,8 @@ public class AddPanel extends javax.swing.JPanel {
         loginUNameField = new javax.swing.JTextField();
         loginPWField = new javax.swing.JPasswordField();
         jLabel33 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(36, 47, 65));
         setForeground(new java.awt.Color(204, 204, 204));
@@ -1447,22 +1450,17 @@ public class AddPanel extends javax.swing.JPanel {
                 signupPasswordFieldMouseClicked(evt);
             }
         });
+        signupPasswordField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signupPasswordFieldActionPerformed(evt);
+            }
+        });
         registerPanel.add(signupPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 210, 40));
-
-        jLabel39.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
-        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel39.setText("New Password");
-        registerPanel.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 140, 40));
 
         jLabel44.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(255, 255, 255));
         jLabel44.setText("Master Password");
-        registerPanel.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 170, 40));
-
-        jLabel47.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
-        jLabel47.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel47.setText("New Username");
-        registerPanel.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 140, 40));
+        registerPanel.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 170, 40));
 
         jSeparator28.setForeground(new java.awt.Color(255, 255, 255));
         jSeparator28.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -1470,7 +1468,7 @@ public class AddPanel extends javax.swing.JPanel {
 
         jSeparator12.setForeground(new java.awt.Color(255, 255, 255));
         jSeparator12.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
-        registerPanel.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 210, 10));
+        registerPanel.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 210, 10));
 
         signupMasterPasswordField.setBackground(new java.awt.Color(36, 47, 65));
         signupMasterPasswordField.setForeground(new java.awt.Color(255, 255, 255));
@@ -1482,7 +1480,7 @@ public class AddPanel extends javax.swing.JPanel {
                 signupMasterPasswordFieldMouseClicked(evt);
             }
         });
-        registerPanel.add(signupMasterPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 210, 40));
+        registerPanel.add(signupMasterPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, 210, 40));
 
         backFromSignUp.setBackground(new java.awt.Color(36, 47, 65));
         backFromSignUp.setForeground(new java.awt.Color(255, 255, 255));
@@ -1503,6 +1501,18 @@ public class AddPanel extends javax.swing.JPanel {
         backFromSignUp.add(backSepResult1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 50, 20));
 
         registerPanel.add(backFromSignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, 70, 50));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bd/edu/daffodilvarsity/studentdatabase/ic_supervisor_account_white_24dp.png"))); // NOI18N
+        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        registerPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, 40, 50));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bd/edu/daffodilvarsity/studentdatabase/ic_vpn_key_white_24dp.png"))); // NOI18N
+        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        registerPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 40, 50));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bd/edu/daffodilvarsity/studentdatabase/ic_perm_identity_white_24dp.png"))); // NOI18N
+        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        registerPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 40, 50));
 
         add(registerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -1586,6 +1596,14 @@ public class AddPanel extends javax.swing.JPanel {
         jLabel33.setForeground(new java.awt.Color(255, 255, 255));
         jLabel33.setText("Don't have access yet?");
         loginPanel.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 450, 140, 50));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bd/edu/daffodilvarsity/studentdatabase/ic_vpn_key_white_24dp.png"))); // NOI18N
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        loginPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 40, 50));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bd/edu/daffodilvarsity/studentdatabase/ic_perm_identity_white_24dp.png"))); // NOI18N
+        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        loginPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 40, 50));
 
         add(loginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
@@ -1871,6 +1889,10 @@ public class AddPanel extends javax.swing.JPanel {
     private void signupMasterPasswordFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signupMasterPasswordFieldMouseClicked
         this.signupMasterPasswordField.setText("");
     }//GEN-LAST:event_signupMasterPasswordFieldMouseClicked
+
+    private void signupPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupPasswordFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_signupPasswordFieldActionPerformed
     // </editor-fold>  
     
     /** Below this line are the IDE generated variables **/
@@ -1944,6 +1966,7 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JTextField findStudentField;
     private javax.swing.JLabel genderLabel4;
     private javax.swing.JLabel idLabel4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -1952,6 +1975,7 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -1962,6 +1986,7 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -1970,7 +1995,7 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -1978,7 +2003,7 @@ public class AddPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
